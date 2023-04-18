@@ -1,4 +1,4 @@
-name: recpack
+name: gru4rec_recpack
 channels:
   - defaults
   - conda-forge
