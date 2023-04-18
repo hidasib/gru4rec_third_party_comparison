@@ -10,3 +10,6 @@
 [submodule "Torch-GRU4Rec"]
 	path = Torch-GRU4Rec
 	url = git@github.com:czappi44/Torch-GRU4Rec.git
+[submodule "GRU4Rec"]
+	path = GRU4Rec
+	url = https://github.com/hidasib/GRU4Rec.git
