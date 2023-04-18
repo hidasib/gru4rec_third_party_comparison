@@ -1,3 +1,6 @@
 [submodule "GRU4Rec_TensorFlow"]
 	path = GRU4Rec_TensorFlow
 	url = git@github.com:czappi44/GRU4Rec_TensorFlow.git
+[submodule "GRU4REC-pytorch"]
+	path = GRU4REC-pytorch
+	url = git@github.com:czappi44/GRU4REC-pytorch.git
