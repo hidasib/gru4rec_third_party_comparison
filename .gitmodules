@@ -7,3 +7,6 @@
 [submodule "KerasGRU4Rec"]
 	path = KerasGRU4Rec
 	url = git@github.com:czappi44/KerasGRU4Rec.git
+[submodule "Torch-GRU4Rec"]
+	path = Torch-GRU4Rec
+	url = git@github.com:czappi44/Torch-GRU4Rec.git
