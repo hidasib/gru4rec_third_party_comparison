@@ -13,3 +13,6 @@
 [submodule "GRU4Rec"]
 	path = GRU4Rec
 	url = https://github.com/hidasib/GRU4Rec.git
+[submodule "recpack"]
+	path = recpack
+	url = git@github.com:czappi44/recpack.git
