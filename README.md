@@ -28,17 +28,18 @@
 - Requirements for the original implementation
     - https://github.com/hidasib/GRU4Rec/blob/87971fe397c4b44e6c7c2c0c7333cbe6e08a545d/README.md#requirements
 - When using the notebooks, select the correct python interpreter, which is located in the directory of the correct conda environment, or in the virtual env for the original version (Theano)
-
+## Examples
+- An example Jupyter Notebook for each model is provided, with description on how to run the experiments.
 ## Download link to the datasets
-- yoochoose:
+- Yoochoose:
     - https://2015.recsyschallenge.com/
     - https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015
-- rees: 
+- Rees46: 
     - https://rees46.com/en/open-cdp
     - https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
-- coveo: 
+- Coveo: 
     - https://www.coveo.com/en/ailabs/shopper-intent-prediction-from-clickstream-e-commerce-data-with-minimal-browsing-information
-- diginetica: 
+- Diginetica: 
     - https://competitions.codalab.org/competitions/11161#learn_the_details-data2
-- retailrocket: 
+- Retailrocket: 
     - https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
