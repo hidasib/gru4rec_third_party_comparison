@@ -2,7 +2,6 @@
 ## Usage
 - Clone the rope
 - Use the following commands in the root folder of the repo
-    - *git submodule init*
     - *git submodule update --init*
 ## Environments
 - Setup for the third party implementation
@@ -27,7 +26,7 @@
         - *conda deactivate*
 - Requirements for the original implementation
     - https://github.com/hidasib/GRU4Rec/blob/87971fe397c4b44e6c7c2c0c7333cbe6e08a545d/README.md#requirements
-- When using the notebooks, select the correct python interpreter, which is located in the directory of the correct conda environment, or in the virtual env for the original version (Theano)
+- When using the notebooks, select the correct python interpreter, which is located in the directory of the correct conda environment.
 ## Examples
 - An example Jupyter Notebook for each model is provided, with description on how to run the experiments.
 ## Download link to the datasets
