@@ -11,7 +11,6 @@ def main(path: str):
     data = pd.read_csv(
         os.path.join(path, "release_10_23_2020.csv"),
         sep=",",
-        date_parser=["server_timestamp_epoch_ms"],
         dtype={
             "session_id_hash": str,
             "event_type": "category",

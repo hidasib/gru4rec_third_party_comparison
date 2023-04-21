@@ -11,7 +11,6 @@ def main(path: str):
     view = pd.read_csv(
         os.path.join(path, "train-item-views.csv"),
         sep=";",
-        date_parser=["timeframe", "eventdate"],
         dtype={"sessionId": int, "userId": np.float64, "itemId": int},
     )
     sessionid_eventdate_min = view.groupby(["sessionId"], as_index=False).agg(
