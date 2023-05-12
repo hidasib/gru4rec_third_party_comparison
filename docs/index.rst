@@ -32,3 +32,9 @@ Please have a look at the NLeSC guide for guidelines about software development.
    :caption: API Reference
 
    analyse_spreadsheet
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Experiments
+
+   rees46/rees46_main
