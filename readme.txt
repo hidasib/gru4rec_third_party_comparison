@@ -1,0 +1,2 @@
+- install env from env.yml
+- to build the project use sphinx-build docs _build
