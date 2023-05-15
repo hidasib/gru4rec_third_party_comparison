@@ -1,5 +1,9 @@
-- install env from env.yml
-- to build the project use sphinx-build docs _build
+- Development
+  - conda env create -f environment.yml
+  - build: sphinx-build docs _build
+
+- Useful links
+  - https://sphinx-design.readthedocs.io/en/sbt-theme/dropdowns.html
 
 
 name: Docs
@@ -14,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme sphinx-book-theme
+          pip install sphinx sphinx_rtd_theme sphinx-book-theme sphinx-tabs sphinx-togglebutton
       - name: Sphinx build
         run: |
           sphinx-build doc _build
