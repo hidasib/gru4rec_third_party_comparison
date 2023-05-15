@@ -37,4 +37,4 @@ Please have a look at the NLeSC guide for guidelines about software development.
    :maxdepth: 2
    :caption: Experiments
 
-   exp_data/exp_dataset
+   By Dataset <exp_data/exp_dataset>
