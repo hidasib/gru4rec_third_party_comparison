@@ -34,7 +34,7 @@ Please have a look at the NLeSC guide for guidelines about software development.
    analyse_spreadsheet
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Experiments
 
-   rees46/rees46_main
+   exp_data/exp_dataset

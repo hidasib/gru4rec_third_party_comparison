@@ -1,0 +1,11 @@
+table.striped-table tr:nth-child(even) {
+    /* background-color:  rgb(141, 141, 141); */
+    background-color: red;
+  }
+
+/* button.hyperparam_toggle span {
+    display: none;
+  }
+button.hyperparam_toggle {
+    content: 'whatever it is you want to add';
+  } */
