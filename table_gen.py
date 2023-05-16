@@ -21,12 +21,23 @@ if __name__ == '__main__':
 
     for ds_name in dataset_names:
         for model_name, model_values in model_names.items():
+            if model_name == "GRU4Rec Official": 
+                continue
             chunk = data[data.Dataset == ds_name].copy()
             chunk1 = chunk[(chunk.Implementation == "GRU4Rec Official") & (chunk.Variant.str.contains(model_name) | chunk.Variant.str.contains("Best params"))]
             chunk2 = chunk[chunk.Implementation == model_name]
+            chunk1 = chunk1[chunk1.loss.isin(chunk2.loss.unique())]
             chunk = pd.concat([chunk1, chunk2])
+            chunk = pd.concat([chunk[chunk.loss == "bpr-max"], chunk[chunk.loss == "cross-entropy"]])
             if len(chunk) == 0:
                 continue
             for sub_ds_name, cols in dataset_cols.items():
                 new_fn = f"{ds_name.lower()}_{model_values}_{sub_ds_name}.csv"
-                chunk[cols].to_csv(os.path.join("docs", "data_sources", new_fn), index=False)
+                subchunk = chunk[cols]
+                if sub_ds_name == "hyperp":
+                    subchunk.set_index("Implementation", drop=True, inplace=True)
+                    subchunk.index.rename("Parameters", inplace=True)
+                    subchunk = subchunk.T
+                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=True)
+                else:
+                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=False)
