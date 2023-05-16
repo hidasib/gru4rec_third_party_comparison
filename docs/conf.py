@@ -41,7 +41,13 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+url_branch = "master"
 html_theme = "sphinx_book_theme" #'sphinx_rtd_theme'
+html_theme_options = {
+    "repository_provider": "github",  # or "gitlab", "bitbucket"
+    "repository_url": f"https://github.com/hidasib/gru4rec_third_party_comparison/tree/{url_branch}",
+    "use_repository_button": True,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
