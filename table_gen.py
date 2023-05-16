@@ -32,12 +32,16 @@ if __name__ == '__main__':
             if len(chunk) == 0:
                 continue
             for sub_ds_name, cols in dataset_cols.items():
-                new_fn = f"{ds_name.lower()}_{model_values}_{sub_ds_name}.csv"
-                subchunk = chunk[cols]
-                if sub_ds_name == "hyperp":
-                    subchunk.set_index("Implementation", drop=True, inplace=True)
-                    subchunk.index.rename("Parameters", inplace=True)
-                    subchunk = subchunk.T
-                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=True)
-                else:
-                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=False)
+                chunk_part = chunk[cols]
+                for l in ["bpr-max", "cross-entropy"]:
+                    subchunk = chunk_part[chunk_part.loss == l]
+                    if len(subchunk) == 0:
+                        continue
+                    new_fn = f"{ds_name.lower()}_{model_values}_{sub_ds_name}_{l}.csv"
+                    index = False
+                    if sub_ds_name == "hyperp":
+                        subchunk.set_index("Implementation", drop=True, inplace=True)
+                        subchunk.index.rename("Parameters", inplace=True)
+                        subchunk = subchunk.T
+                        index = True
+                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=index)

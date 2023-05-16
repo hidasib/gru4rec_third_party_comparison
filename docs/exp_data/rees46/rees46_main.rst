@@ -17,37 +17,12 @@ GRU4REC-pytorch
 
          .. csv-table:: Metrics
             :class: striped_table
-            :file: /data_sources/rees46_gru4rec_pytorch_metrics.csv
+            :file: /data_sources/rees46_gru4rec_pytorch_metrics_bpr-max.csv
             :header-rows: 1
-
-   .. tab-item:: Metric Diff
-      :sync: key2
-
-         .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
-            :class: striped_table
-            :file: /data_sources/rees46_gru4rec_pytorch_metrics_change.csv
-            :header-rows: 1
-
-   .. tab-item:: Hyperparameters
-      :sync: key3
-
-         .. csv-table:: Hyperparameters used in the experiment
-            :class: striped_table
-            :file: /data_sources/rees46_gru4rec_pytorch_hyperp.csv
-            :header-rows: 1
-
-------------------------------------------------------------------
-Torch-GRU4Rec
-------------------------------------------------------------------
-
-.. tab-set::
-
-   .. tab-item:: Metrics
-      :sync: key1
 
          .. csv-table:: Metrics
             :class: striped_table
-            :file: /data_sources/rees46_torch_gru4rec_metrics.csv
+            :file: /data_sources/rees46_gru4rec_pytorch_metrics_cross-entropy.csv
             :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -55,103 +30,150 @@ Torch-GRU4Rec
 
          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
             :class: striped_table
-            :file: /data_sources/rees46_torch_gru4rec_metrics_change.csv
+            :file: /data_sources/rees46_gru4rec_pytorch_metrics_change_bpr-max.csv
             :header-rows: 1
-
-   .. tab-item:: Hyperparameters
-      :sync: key3
-
-         .. csv-table:: Hyperparameters used in the experiment
-            :class: striped_table
-            :file: /data_sources/rees46_torch_gru4rec_hyperp.csv
-            :header-rows: 1
-
-------------------------------------------------------------------
-Recpack
-------------------------------------------------------------------
-
-.. tab-set::
-
-   .. tab-item:: Metrics
-      :sync: key1
-
-         .. csv-table:: Metrics
-            :class: striped_table
-            :file: /data_sources/rees46_recpack_metrics.csv
-            :header-rows: 1
-
-   .. tab-item:: Metric Diff
-      :sync: key2
-
+         
          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
             :class: striped_table
-            :file: /data_sources/rees46_recpack_metrics_change.csv
+            :file: /data_sources/rees46_gru4rec_pytorch_metrics_change_cross-entropy.csv
             :header-rows: 1
 
    .. tab-item:: Hyperparameters
       :sync: key3
 
-         .. csv-table:: Hyperparameters used in the experiment
-            :class: striped_table
-            :file: /data_sources/rees46_recpack_hyperp.csv
-            :header-rows: 1
+         .. grid:: 1 1 1 2
+            :gutter: 1
 
-------------------------------------------------------------------
-GRU4Rec_Tensorflow
-------------------------------------------------------------------
+            .. grid-item::
 
-.. tab-set::
+               .. csv-table:: Hyperparameters used in the experiment
+                  :class: striped_table, vertical_table
+                  :file: /data_sources/rees46_gru4rec_pytorch_hyperp_bpr-max.csv
+                  :header-rows: 1
 
-   .. tab-item:: Metrics
-      :sync: key1
+            .. grid-item::
 
-         .. csv-table:: Metrics
-            :class: striped_table
-            :file: /data_sources/rees46_gru4rec_tensorflow_metrics.csv
-            :header-rows: 1
+               .. csv-table:: Hyperparameters used in the experiment
+                  :class: striped_table, vertical_table
+                  :file: /data_sources/rees46_gru4rec_pytorch_hyperp_cross-entropy.csv
+                  :header-rows: 1
 
-   .. tab-item:: Metric Diff
-      :sync: key2
+.. ------------------------------------------------------------------
+.. Torch-GRU4Rec
+.. ------------------------------------------------------------------
 
-         .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
-            :class: striped_table
-            :file: /data_sources/rees46_gru4rec_tensorflow_metrics_change.csv
-            :header-rows: 1
+.. .. tab-set::
 
-   .. tab-item:: Hyperparameters
-      :sync: key3
+..    .. tab-item:: Metrics
+..       :sync: key1
 
-         .. csv-table:: Hyperparameters used in the experiment
-            :class: striped_table
-            :file: /data_sources/rees46_gru4rec_tensorflow_hyperp.csv
-            :header-rows: 1
+..          .. csv-table:: Metrics
+..             :class: striped_table
+..             :file: /data_sources/rees46_torch_gru4rec_metrics.csv
+..             :header-rows: 1
 
-------------------------------------------------------------------
-KerasGRU4Rec
-------------------------------------------------------------------
+..    .. tab-item:: Metric Diff
+..       :sync: key2
 
-.. tab-set::
+..          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+..             :class: striped_table
+..             :file: /data_sources/rees46_torch_gru4rec_metrics_change.csv
+..             :header-rows: 1
 
-   .. tab-item:: Metrics
-      :sync: key1
+..    .. tab-item:: Hyperparameters
+..       :sync: key3
 
-         .. csv-table:: Metrics
-            :class: striped_table
-            :file: /data_sources/rees46_keras_gru4rec_metrics.csv
-            :header-rows: 1
+..          .. csv-table:: Hyperparameters used in the experiment
+..             :class: striped_table
+..             :file: /data_sources/rees46_torch_gru4rec_hyperp.csv
+..             :header-rows: 1
 
-   .. tab-item:: Metric Diff
-      :sync: key2
+.. ------------------------------------------------------------------
+.. Recpack
+.. ------------------------------------------------------------------
 
-         .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
-            :class: striped_table
-            :file: /data_sources/rees46_keras_gru4rec_metrics_change.csv
-            :header-rows: 1
+.. .. tab-set::
 
-   .. tab-item:: Hyperparameters
-      :sync: key3
+..    .. tab-item:: Metrics
+..       :sync: key1
 
-         .. csv-table:: Hyperparameters used in the experiment
-            :class: striped_table
-            :file: /data_sources/rees46_keras_gru4rec_hyperp.csv
-            :header-rows: 1
+..          .. csv-table:: Metrics
+..             :class: striped_table
+..             :file: /data_sources/rees46_recpack_metrics.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Metric Diff
+..       :sync: key2
+
+..          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+..             :class: striped_table
+..             :file: /data_sources/rees46_recpack_metrics_change.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Hyperparameters
+..       :sync: key3
+
+..          .. csv-table:: Hyperparameters used in the experiment
+..             :class: striped_table
+..             :file: /data_sources/rees46_recpack_hyperp.csv
+..             :header-rows: 1
+
+.. ------------------------------------------------------------------
+.. GRU4Rec_Tensorflow
+.. ------------------------------------------------------------------
+
+.. .. tab-set::
+
+..    .. tab-item:: Metrics
+..       :sync: key1
+
+..          .. csv-table:: Metrics
+..             :class: striped_table
+..             :file: /data_sources/rees46_gru4rec_tensorflow_metrics.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Metric Diff
+..       :sync: key2
+
+..          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+..             :class: striped_table
+..             :file: /data_sources/rees46_gru4rec_tensorflow_metrics_change.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Hyperparameters
+..       :sync: key3
+
+..          .. csv-table:: Hyperparameters used in the experiment
+..             :class: striped_table
+..             :file: /data_sources/rees46_gru4rec_tensorflow_hyperp.csv
+..             :header-rows: 1
+
+.. ------------------------------------------------------------------
+.. KerasGRU4Rec
+.. ------------------------------------------------------------------
+
+.. .. tab-set::
+
+..    .. tab-item:: Metrics
+..       :sync: key1
+
+..          .. csv-table:: Metrics
+..             :class: striped_table
+..             :file: /data_sources/rees46_keras_gru4rec_metrics.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Metric Diff
+..       :sync: key2
+
+..          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+..             :class: striped_table
+..             :file: /data_sources/rees46_keras_gru4rec_metrics_change.csv
+..             :header-rows: 1
+
+..    .. tab-item:: Hyperparameters
+..       :sync: key3
+
+..          .. csv-table:: Hyperparameters used in the experiment
+..             :class: striped_table
+..             :file: /data_sources/rees46_keras_gru4rec_hyperp.csv
+..             :header-rows: 1
