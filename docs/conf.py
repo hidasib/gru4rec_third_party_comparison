@@ -47,6 +47,14 @@ html_theme_options = {
     "repository_provider": "github",  # or "gitlab", "bitbucket"
     "repository_url": f"https://github.com/hidasib/gru4rec_third_party_comparison/tree/{url_branch}",
     "use_repository_button": True,
+    "icon_links": [
+        {
+            "name": "Github Last Commit",
+            "url": "https://github.com/hidasib/gru4rec_third_party_comparison/tree/master",
+            "icon": "https://img.shields.io/github/last-commit/hidasib/GRU4Rec/master",
+            "type": "url",
+        }
+    ]
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
