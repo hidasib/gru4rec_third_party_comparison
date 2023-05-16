@@ -1,5 +1,4 @@
-function changeMultipleCSS() {
-    // Defining all our CSS styles
+function changeTableCSS() {
     const curr_theme = document.querySelector("html").attributes['data-theme'].value
     let myStyles = "";
     if (curr_theme == 'dark'){
@@ -12,14 +11,12 @@ function changeMultipleCSS() {
         background-color: rgb(235, 235, 235);
         `;
     }
-    
     const elements = document.querySelectorAll("table.striped-table tr:nth-child(even)");
     elements.forEach((e)=>e.style.cssText = myStyles)
-    // elements.style.cssText = myStyles;
 }
 
 window.addEventListener("load", function(){
-    changeMultipleCSS();
+    changeTableCSS();
     const button = document.querySelector("button.theme-switch-button");
-    button.addEventListener("click", changeMultipleCSS);
+    button.addEventListener("click", changeTableCSS);
 });
