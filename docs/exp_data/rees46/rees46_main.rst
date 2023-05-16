@@ -6,37 +6,6 @@ Some text
 
 Some text
 
-.. ------------------------------------------------------------------
-.. GRU4Rec Official
-.. ------------------------------------------------------------------
-.. .. :widths: 33, 33, 34
-
-.. .. tab-set::
-
-..    .. tab-item:: Metrics
-..       :sync: key1
-
-..          .. csv-table:: Metrics
-..             :class: striped_table
-..             :file: /data_sources/rees46_gru4rec_official_metrics.csv
-..             :header-rows: 1
-
-..    .. tab-item:: Metric Diff
-..       :sync: key2
-
-..          .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
-..             :class: striped_table
-..             :file: /data_sources/rees46_gru4rec_official_metrics_change.csv
-..             :header-rows: 1
-
-..    .. tab-item:: Hyperparameters
-..       :sync: key3
-
-..          .. csv-table:: Hyperparameters used in the experiment
-..             :class: striped_table
-..             :file: /data_sources/rees46_gru4rec_official_hyperp.csv
-..             :header-rows: 1
-
 ------------------------------------------------------------------
 GRU4REC-pytorch
 ------------------------------------------------------------------
