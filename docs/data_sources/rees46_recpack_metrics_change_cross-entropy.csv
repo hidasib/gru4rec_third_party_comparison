@@ -1,0 +1,7 @@
+Implementation,Variant,Recall\@1 Diff,MRR\@1 Diff,Recall\@5 Diff,MRR\@5 Diff,Recall\@10 Diff,MRR\@10 Diff,Recall\@20 Diff,MRR\@20 Diff
+GRU4Rec Official,Best params,,,,,,,,
+GRU4Rec Official,Recpack params,-24.21%,-24.21%,-15.63%,-19.47%,-12.16%,-18.19%,-9.05%,-17.39%
+GRU4Rec Official,Recpack params,-2.76%,-2.76%,-2.10%,-2.40%,-2.23%,-2.42%,-2.22%,-2.41%
+Recpack,OOB,-33.20%,-33.20%,-23.61%,-27.73%,-20.48%,-26.53%,-16.61%,-25.60%
+Recpack,Correct exp,-31.97%,-31.97%,-23.19%,-26.98%,-20.31%,-25.89%,-16.59%,-25.00%
+Recpack,Correct full,-31.99%,-31.99%,-23.36%,-27.27%,-20.18%,-26.07%,-17.11%,-25.29%
