@@ -1,0 +1,7 @@
+Implementation,Variant,Avg. epoch time (s),Avg. epoch time to Best,Avg. epoch time to Matching,Avg. mb/s,Avg. e/s
+GRU4Rec Official,Best params,451.75,,,991.99,47613.00
+GRU4Rec Official,Recpack params,442.76,0.98 x,,1012.15,48581.00
+GRU4Rec Official,Recpack params,2859.14,6.33 x,6.46 x,156.74,7523.00
+Recpack,OOB,13458.18,29.79 x,30.40 x,207.29,1598.25
+Recpack,Correct exp,13462.56,29.80 x,30.41 x,207.22,1597.74
+Recpack,Correct full,13693.73,30.31 x,30.93 x,203.72,1570.76

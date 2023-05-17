@@ -1,0 +1,7 @@
+Implementation,Variant,Recall\@1 Diff,MRR\@1 Diff,Recall\@5 Diff,MRR\@5 Diff,Recall\@10 Diff,MRR\@10 Diff,Recall\@20 Diff,MRR\@20 Diff
+GRU4Rec Official,Best params,,,,,,,,
+GRU4Rec Official,KerasGRU4Rec params,-11.66%,-11.66%,-11.62%,-11.83%,-12.02%,-11.98%,-11.70%,-12.00%
+GRU4Rec Official,KerasGRU4Rec params,-6.72%,-6.72%,-9.43%,-8.02%,-10.89%,-8.65%,-11.37%,-8.99%
+KerasGRU4Rec,OOB,-21.10%,-21.10%,-22.38%,-22.09%,-20.80%,-21.61%,-19.53%,-21.32%
+KerasGRU4Rec,Correct exp,-19.91%,-19.91%,-20.08%,-20.02%,-21.08%,-20.36%,-20.94%,-20.44%
+KerasGRU4Rec,Correct full,-21.27%,-21.27%,-20.94%,-20.82%,-20.92%,-20.81%,-20.61%,-20.81%

@@ -1,0 +1,17 @@
+,GRU4Rec Official,GRU4Rec Official,GRU4Rec Official,KerasGRU4Rec,KerasGRU4Rec,KerasGRU4Rec
+Variant,Best params,KerasGRU4Rec params,KerasGRU4Rec params,OOB,Correct exp,Correct full
+loss,cross-entropy,cross-entropy,cross-entropy,cross-entropy,cross-entropy,cross-entropy
+optim,adagrad,adagrad,adagrad,adam,adagrad,adagrad
+constrained_embedding,True,False,False,False,False,False
+embedding,0,0,0,0,0,0
+final_act,softmax,softmax,softmax,softmax,softmax,softmax
+layers,512,512,512,100,512,512
+batch_size,32,32,32,32,32,32
+dropout_p_embed,0.4,0,0,N/A,N/A,N/A
+dropout_p_hidden,0.15,0.15,0.15,0.15,0.15,0.15
+learning_rate,0.03,0.03,0.03,0.001,0.03,0.03
+momentum,0,0,0,N/A,N/A,N/A
+n_sample,2048,2048,ALL,N/A,N/A,N/A
+sample_alpha,0,0,N/A,N/A,N/A,N/A
+bpreg,0,0,0,N/A,N/A,N/A
+logq,1,0,N/A,N/A,N/A,N/A

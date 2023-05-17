@@ -1,0 +1,6 @@
+Implementation,Variant,Avg. epoch time (s),Avg. epoch time to Best,Avg. epoch time to Matching,Avg. mb/s,Avg. e/s
+GRU4Rec Official,Best params,1956.80,,,916.45,29326.00
+GRU4Rec Official,GRU4REC-pytorch params,1492.53,0.76 x,,1201.51,38448.00
+GRU4REC-pytorch,OOB,29528.42,15.09 x,19.78 x,60.73,1943.38
+GRU4REC-pytorch,OOB Correct Eval,29553.78,15.10 x,19.80 x,60.68,1941.71
+GRU4REC-pytorch,Correct full,30497.64,15.59 x,20.43 x,58.80,1881.62

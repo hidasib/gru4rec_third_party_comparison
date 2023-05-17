@@ -1,0 +1,4 @@
+Implementation,Variant,Recall\@1 Diff,MRR\@1 Diff,Recall\@5 Diff,MRR\@5 Diff,Recall\@10 Diff,MRR\@10 Diff,Recall\@20 Diff,MRR\@20 Diff
+GRU4Rec Official,Best params,,,,,,,,
+GRU4Rec Official,Torch-GRU4Rec params,-21.12%,-21.12%,-18.63%,-19.73%,-17.11%,-19.29%,-14.20%,-18.73%
+Torch-GRU4Rec,OOB,-29.89%,-29.89%,-27.10%,-28.36%,-25.50%,-27.83%,-22.60%,-27.27%

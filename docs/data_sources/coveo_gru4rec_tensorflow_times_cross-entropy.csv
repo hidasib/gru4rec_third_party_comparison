@@ -1,0 +1,5 @@
+Implementation,Variant,Avg. epoch time (s),Avg. epoch time to Best,Avg. epoch time to Matching,Avg. mb/s,Avg. e/s
+GRU4Rec Official,Best params,37.17,,,1047.47,33505.00
+GRU4Rec Official,GRU4Rec_Tensorflow params,29.40,0.79 x,,1324.38,42363.00
+GRU4Rec_Tensorflow,OOB,55.39,1.49 x,1.88 x,449.67,22483.60
+GRU4Rec_Tensorflow,Correct Exp,81.90,2.20 x,2.79 x,475.29,15209.23

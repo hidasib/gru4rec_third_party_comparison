@@ -1,0 +1,17 @@
+,GRU4Rec Official,GRU4Rec Official,GRU4REC-pytorch,GRU4REC-pytorch,GRU4REC-pytorch
+Variant,Best params,GRU4REC-pytorch params,OOB,OOB Correct Eval,Correct full
+loss,cross-entropy,cross-entropy,cross-entropy,cross-entropy,cross-entropy
+optim,adagrad,adagrad,adagrad,adagrad,adagrad
+constrained_embedding,True,False,False,False,False
+embedding,0,192,192,192,192
+final_act,softmax,softmax,softmax,softmax,softmax
+layers,192,192,192,192,192
+batch_size,128,128,128,128,128
+dropout_p_embed,0.45,0.45,N/A,N/A,0.45
+dropout_p_hidden,0.15,0.15,N/A,N/A,0.15
+learning_rate,0.1,0.1,0.1,0.1,0.1
+momentum,0,0,N/A,N/A,N/A
+n_sample,2048,0,N/A,N/A,N/A
+sample_alpha,0,0,N/A,N/A,N/A
+bpreg,0,0,N/A,N/A,N/A
+logq,1,0,N/A,N/A,N/A

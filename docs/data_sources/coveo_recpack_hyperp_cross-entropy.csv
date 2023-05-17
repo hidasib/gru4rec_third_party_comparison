@@ -1,0 +1,17 @@
+,GRU4Rec Official,GRU4Rec Official,GRU4Rec Official,Recpack,Recpack,Recpack
+Variant,Best params,Recpack params,Recpack params,OOB,Correct exp,Correct full
+loss,cross-entropy,cross-entropy,cross-entropy,cross-entropy,cross-entropy,cross-entropy
+optim,adagrad,adagrad,adagrad,adagrad,adagrad,adagrad
+constrained_embedding,True,False,False,False,False,False
+embedding,0,512,512,512,512,512
+final_act,softmax,softmax,softmax,softmax,softmax,softmax
+layers,512,512,512,512,512,512
+batch_size,32,32,32,32,32,32
+dropout_p_embed,0.4,0.4,0.4,0.4,0.4,0.4
+dropout_p_hidden,0.15,0.15,0.15,0.4,0.4,0.15
+learning_rate,0.03,0.03,0.03,0.03,0.03,0.03
+momentum,0,0,N/A,N/A,N/A,N/A
+n_sample,2048,2048,ALL,N/A,N/A,N/A
+sample_alpha,0,0,N/A,N/A,N/A,N/A
+bpreg,0,0,0,0,0,0
+logq,1,0,N/A,N/A,N/A,N/A

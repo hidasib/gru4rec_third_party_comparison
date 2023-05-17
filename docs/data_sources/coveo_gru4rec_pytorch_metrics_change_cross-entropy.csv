@@ -1,0 +1,6 @@
+Implementation,Variant,Recall\@1 Diff,MRR\@1 Diff,Recall\@5 Diff,MRR\@5 Diff,Recall\@10 Diff,MRR\@10 Diff,Recall\@20 Diff,MRR\@20 Diff
+GRU4Rec Official,Best params,,,,,,,,
+GRU4Rec Official,GRU4REC-pytorch params,-43.74%,-43.74%,-38.54%,-41.18%,-34.70%,-39.78%,-30.08%,-38.46%
+GRU4REC-pytorch,OOB,-36.22%,-36.22%,-66.97%,-54.48%,-74.23%,-57.91%,-78.70%,-59.84%
+GRU4REC-pytorch,OOB Correct Eval,-35.53%,-35.53%,-65.62%,-53.30%,-72.86%,-56.69%,-77.50%,-58.65%
+GRU4REC-pytorch,Correct full,-54.53%,-54.53%,-47.65%,-51.22%,-43.66%,-49.61%,-38.73%,-48.21%

@@ -1,0 +1,4 @@
+Implementation,Variant,Avg. epoch time (s),Avg. epoch time to Best,Avg. epoch time to Matching,Avg. mb/s,Avg. e/s
+GRU4Rec Official,Best params,487.51,,,919.23,44121.00
+GRU4Rec Official,Torch-GRU4Rec params,461.22,0.95 x,,971.64,46636.00
+Torch-GRU4Rec,OOB,2164.21,4.44 x,4.69 x,207.09,9939.82

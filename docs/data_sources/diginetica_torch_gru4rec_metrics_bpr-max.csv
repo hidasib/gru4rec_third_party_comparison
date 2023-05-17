@@ -1,0 +1,4 @@
+Implementation,Variant,Recall\@1,MRR\@1,Recall\@5,MRR\@5,Recall\@10,MRR\@10,Recall\@20,MRR\@20
+GRU4Rec Official,Best params,0.0688,0.0688,0.2304,0.1237,0.3533,0.1399,0.4995,0.1500
+GRU4Rec Official,Torch-GRU4Rec params,0.0643,0.0643,0.2113,0.1143,0.3204,0.1287,0.4597,0.1383
+Torch-GRU4Rec,OOB,0.0636,0.0636,0.2110,0.1137,0.3185,0.1278,0.4550,0.1372

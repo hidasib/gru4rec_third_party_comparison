@@ -1,0 +1,5 @@
+Implementation,Variant,Recall\@1,MRR\@1,Recall\@5,MRR\@5,Recall\@10,MRR\@10,Recall\@20,MRR\@20
+GRU4Rec Official,Best params,0.0647,0.0647,0.2220,0.1181,0.3414,0.1339,0.4874,0.1440
+GRU4Rec Official,GRU4Rec_Tensorflow params,0.0313,0.0313,0.1136,0.0588,0.1893,0.0687,0.2976,0.0761
+GRU4Rec_Tensorflow,OOB,0.0043,0.0043,0.0129,0.0073,0.0202,0.0082,0.0284,0.0088
+GRU4Rec_Tensorflow,Correct Exp,0.0335,0.0335,0.1224,0.0635,0.1978,0.0734,0.3014,0.0805

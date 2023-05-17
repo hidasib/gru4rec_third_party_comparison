@@ -1,0 +1,17 @@
+,GRU4Rec Official,GRU4Rec Official,Torch-GRU4Rec
+Variant,Best params,Torch-GRU4Rec params,OOB
+loss,bpr-max,bpr-max,bpr-max
+optim,adagrad,adagrad,adagrad
+constrained_embedding,True,False,False
+embedding,0,512,512
+final_act,elu-1,elu-1,elu-1
+layers,512,512,512
+batch_size,128,128,128
+dropout_p_embed,0.5,0.5,0.5
+dropout_p_hidden,0.3,0.3,0.3
+learning_rate,0.05,0.05,0.05
+momentum,0.15,0,N/A
+n_sample,2048,2048,2048
+sample_alpha,0.3,0.3,0.3
+bpreg,0.9,0.9,0.9
+logq,0,0,N/A

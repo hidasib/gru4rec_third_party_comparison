@@ -1,0 +1,7 @@
+Implementation,Variant,Avg. epoch time (s),Avg. epoch time to Best,Avg. epoch time to Matching,Avg. mb/s,Avg. e/s
+GRU4Rec Official,Best params,367.41,,,650.91,156189.00
+GRU4Rec Official,KerasGRU4Rec params,306.43,0.83 x,,780.44,187270.00
+GRU4Rec Official,KerasGRU4Rec params,35765.38,97.34 x,116.72 x,6.69,1604.00
+KerasGRU4Rec,OOB,123265.62,335.50 x,402.26 x,1.94,465.52
+KerasGRU4Rec,Correct exp,130917.81,356.33 x,427.24 x,1.83,438.31
+KerasGRU4Rec,Correct full,130987.98,356.52 x,427.46 x,1.83,438.08
