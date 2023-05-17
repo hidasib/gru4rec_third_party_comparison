@@ -76,6 +76,27 @@ GRU4REC-pytorch
                :file: /data_sources/rees46_gru4rec_pytorch_hyperp_cross-entropy.csv
                :header-rows: 1
 
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_gru4rec_pytorch_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_gru4rec_pytorch_times_cross-entropy.csv
+               :header-rows: 1
+
 ------------------------------------------------------------------
 Torch-GRU4Rec
 ------------------------------------------------------------------
@@ -143,6 +164,27 @@ Torch-GRU4Rec
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
                :file: /data_sources/rees46_torch_gru4rec_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_torch_gru4rec_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_torch_gru4rec_times_cross-entropy.csv
                :header-rows: 1
    
 
@@ -215,6 +257,27 @@ Recpack
                :file: /data_sources/rees46_recpack_hyperp_cross-entropy.csv
                :header-rows: 1
 
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_recpack_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_recpack_times_cross-entropy.csv
+               :header-rows: 1
+
 ------------------------------------------------------------------
 GRU4Rec_Tensorflow
 ------------------------------------------------------------------
@@ -278,6 +341,25 @@ GRU4Rec_Tensorflow
                :file: /data_sources/rees46_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by GRU4Rec_Tensorflow
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_gru4rec_tensorflow_times_cross-entropy.csv
+               :header-rows: 1
+
 ------------------------------------------------------------------
 KerasGRU4Rec
 ------------------------------------------------------------------
@@ -339,4 +421,23 @@ KerasGRU4Rec
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
                :file: /data_sources/rees46_keras_gru4rec_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by KerasGRU4Rec
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/rees46_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
