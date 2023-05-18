@@ -49,11 +49,24 @@ html_theme_options = {
     "use_repository_button": True,
     "icon_links": [
         {
+            "name": "Email Balázs Hidasi",
+            "url": "mailto: balazs.h@taboola.com",
+            "icon": "https://img.shields.io/static/v1?style=plastic&logo=gmail&label=Email&message=balazs.h@taboola.com&color=green",
+            "type": "url",
+        },
+        {
+            "name": "Twitter Balázs Hidasi",
+            "url": "https://twitter.com/balazshidasi",
+            "icon": "https://img.shields.io/static/v1?style=plastic&logo=twitter&label=Follow&message=@balazshidasi&color=green", #"https://img.shields.io/twitter/follow/balazshidasi?style=social",
+            "type": "url",
+        },
+        {
             "name": "Github Last Commit",
             "url": "https://github.com/hidasib/gru4rec_third_party_comparison/tree/master",
-            "icon": "https://img.shields.io/github/last-commit/hidasib/GRU4Rec/master",
+            "icon": "https://img.shields.io/github/last-commit/hidasib/GRU4Rec/master?style=plastic",
             "type": "url",
-        }
+        },
+        
     ]
 }
 
