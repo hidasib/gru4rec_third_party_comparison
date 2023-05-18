@@ -78,4 +78,4 @@ if __name__ == '__main__':
                     if "loss" in subchunk.columns:
                         subchunk.drop(columns=["loss"], inplace=True)
                     subchunk.rename(columns=new_headers, inplace=True)
-                    subchunk.to_csv(os.path.join("docs", "data_sources", new_fn), index=index, float_format='%.4f' if sub_ds_name != "times" else '%.2f')
+                    subchunk.to_csv(os.path.join("docs", "data_sources", "results", new_fn), index=index, float_format='%.4f' if sub_ds_name != "times" else '%.2f')
