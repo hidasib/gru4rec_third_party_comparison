@@ -1,6 +1,6 @@
-Rees46
+Yoochoose
 ==================================================================
-Description and some text for the Rees46 dataset.
+Description and some text for the Yoochoose dataset.
 
 Some text
 
@@ -23,7 +23,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_bpr-max.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_metrics_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -31,7 +31,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -44,7 +44,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_change_bpr-max.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_metrics_change_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -52,7 +52,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -65,7 +65,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_hyperp_bpr-max.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_hyperp_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -73,7 +73,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -86,7 +86,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_times_bpr-max.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_times_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -94,7 +94,7 @@ GRU4REC-pytorch
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_pytorch_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_pytorch_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -113,7 +113,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_metrics_bpr-max.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_metrics_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -121,7 +121,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -134,7 +134,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_metrics_change_bpr-max.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_metrics_change_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -142,7 +142,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -155,7 +155,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_hyperp_bpr-max.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_hyperp_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -163,7 +163,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -176,7 +176,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_times_bpr-max.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_times_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -184,7 +184,7 @@ Torch-GRU4Rec
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_torch_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_torch_gru4rec_times_cross-entropy.csv
                :header-rows: 1
    
 
@@ -204,7 +204,7 @@ Recpack
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_metrics_bpr-max.csv
+               :file: /data_sources/results/yoochoose_recpack_metrics_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -212,7 +212,7 @@ Recpack
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_recpack_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -225,7 +225,7 @@ Recpack
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_metrics_change_bpr-max.csv
+               :file: /data_sources/results/yoochoose_recpack_metrics_change_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -233,7 +233,7 @@ Recpack
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_recpack_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -246,7 +246,7 @@ Recpack
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_hyperp_bpr-max.csv
+               :file: /data_sources/results/yoochoose_recpack_hyperp_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -254,7 +254,7 @@ Recpack
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_recpack_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -267,7 +267,7 @@ Recpack
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_times_bpr-max.csv
+               :file: /data_sources/results/yoochoose_recpack_times_bpr-max.csv
                :header-rows: 1
 
          .. tab-item:: Cross-Entropy
@@ -275,7 +275,7 @@ Recpack
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_recpack_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_recpack_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -300,7 +300,7 @@ GRU4Rec_Tensorflow
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -319,7 +319,7 @@ GRU4Rec_Tensorflow
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -338,7 +338,7 @@ GRU4Rec_Tensorflow
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -357,7 +357,7 @@ GRU4Rec_Tensorflow
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -382,7 +382,7 @@ KerasGRU4Rec
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -401,7 +401,7 @@ KerasGRU4Rec
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -420,7 +420,7 @@ KerasGRU4Rec
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -439,5 +439,5 @@ KerasGRU4Rec
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
