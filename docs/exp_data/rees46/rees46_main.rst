@@ -3,6 +3,10 @@ Rees46
 Description and some text for the Rees46 dataset.
 
 
+.. raw:: html
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
 .. tab-set::
 
    .. tab-item:: BPR-Max
@@ -12,7 +16,6 @@ Description and some text for the Rees46 dataset.
          <div class=chart-container>
             <canvas class="bar-chart" id="bprmax"></canvas>
          </div>
-         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
    .. tab-item:: Cross-Entropy
 
@@ -21,7 +24,6 @@ Description and some text for the Rees46 dataset.
          <div class=chart-container>
             <canvas class="bar-chart" id="xe"></canvas>
          </div>
-         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 ------------------------------------------------------------------
