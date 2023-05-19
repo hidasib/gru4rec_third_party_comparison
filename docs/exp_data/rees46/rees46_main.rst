@@ -2,9 +2,26 @@ Rees46
 ==================================================================
 Description and some text for the Rees46 dataset.
 
-Some text
 
-Some text
+.. tab-set::
+
+   .. tab-item:: BPR-Max
+
+      .. raw:: html
+
+         <div class=chart-container>
+            <canvas class="bar-chart" id="bprmax"></canvas>
+         </div>
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+   .. tab-item:: Cross-Entropy
+
+      .. raw:: html
+
+         <div class=chart-container>
+            <canvas class="bar-chart" id="xe"></canvas>
+         </div>
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 ------------------------------------------------------------------
@@ -22,7 +39,7 @@ GRU4REC-pytorch
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_bpr-max.csv
                :header-rows: 1
 

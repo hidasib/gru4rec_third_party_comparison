@@ -38,3 +38,10 @@ a.footer-banner {
 table.striped-table tr:nth-child(even) {
   background-color: rgb(226, 226, 226);
 }
+
+/*BARPLOT*/
+iframe.barplot-container {
+  border: none;
+  width: 80%;
+  height: auto;
+}
