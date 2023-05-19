@@ -6,10 +6,11 @@ Description and some text for the Rees46 dataset.
 .. raw:: html
 
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   
+
 .. tab-set::
 
    .. tab-item:: BPR-Max
+      :sync: key_sub_1
 
       .. raw:: html
 
@@ -18,6 +19,7 @@ Description and some text for the Rees46 dataset.
          </div>
 
    .. tab-item:: Cross-Entropy
+      :sync: key_sub_2
 
       .. raw:: html
 
@@ -49,7 +51,7 @@ GRU4REC-pytorch
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/rees46_gru4rec_pytorch_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -131,7 +133,7 @@ Torch-GRU4Rec
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/rees46_torch_gru4rec_metrics_bpr-max.csv
                :header-rows: 1
 
@@ -139,7 +141,7 @@ Torch-GRU4Rec
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/rees46_torch_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -222,7 +224,7 @@ Recpack
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/rees46_recpack_metrics_bpr-max.csv
                :header-rows: 1
 
@@ -230,7 +232,7 @@ Recpack
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/rees46_recpack_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -318,7 +320,7 @@ GRU4Rec_Tensorflow
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -400,7 +402,7 @@ KerasGRU4Rec
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/rees46_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
