@@ -2,9 +2,30 @@ Retailrocket
 ==================================================================
 Description and some text for the Retailrocket dataset.
 
-Some text
 
-Some text
+.. raw:: html
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+.. tab-set::
+
+   .. tab-item:: BPR-Max
+      :sync: key_sub_1
+
+      .. raw:: html
+
+         <div class=chart-container>
+            <canvas class="bar-chart" id="bprmax"></canvas>
+         </div>
+
+   .. tab-item:: Cross-Entropy
+      :sync: key_sub_2
+
+      .. raw:: html
+
+         <div class=chart-container>
+            <canvas class="bar-chart" id="xe"></canvas>
+         </div>
 
 
 ------------------------------------------------------------------
@@ -22,7 +43,7 @@ GRU4REC-pytorch
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/retailrocket_gru4rec_pytorch_metrics_bpr-max.csv
                :header-rows: 1
 
@@ -30,7 +51,7 @@ GRU4REC-pytorch
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/retailrocket_gru4rec_pytorch_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -112,7 +133,7 @@ Torch-GRU4Rec
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/retailrocket_torch_gru4rec_metrics_bpr-max.csv
                :header-rows: 1
 
@@ -120,7 +141,7 @@ Torch-GRU4Rec
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/retailrocket_torch_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -203,7 +224,7 @@ Recpack
             :sync: key_sub_1
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, bprmax
                :file: /data_sources/results/retailrocket_recpack_metrics_bpr-max.csv
                :header-rows: 1
 
@@ -211,7 +232,7 @@ Recpack
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/retailrocket_recpack_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -299,7 +320,7 @@ GRU4Rec_Tensorflow
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/retailrocket_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
@@ -381,7 +402,7 @@ KerasGRU4Rec
             :sync: key_sub_2
 
             .. csv-table:: Metrics
-               :class: striped_table
+               :class: striped_table, xe
                :file: /data_sources/results/retailrocket_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
