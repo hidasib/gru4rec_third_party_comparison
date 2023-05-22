@@ -15,13 +15,50 @@ function changeTableCSS() {
     elements.forEach((e)=>e.style.cssText = myStyles)
 }
 
-function createChart(table_id, column_index, chart_label) {
-    const colors_0 = "#e60049";
-    const colors = ["#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0"];
-    const canvas = document.querySelector(`canvas.bar-chart[id=${table_id}]`);
+function createChart(canvas, models_metrics, plot_bar_colors, plot_bar_border_colors, chart_label) {
+    let screen_width = document.documentElement.clientWidth;
+    if (screen_width > 992) {
+        border_width = 3 //6.5
+        bar_thickness = 30
+    }
+    else {
+        border_width = 1.5
+        bar_thickness = 15
+    }
+    
+    new Chart(
+    canvas, 
+        {
+            type: 'bar',
+            data: {
+                labels: Object.keys(models_metrics),
+                datasets: [
+                    {
+                    label: chart_label,
+                    data: Object.values(models_metrics),
+                    borderWidth: border_width,
+                    barThickness: bar_thickness,
+                    backgroundColor: plot_bar_colors,
+                    borderColor: plot_bar_border_colors,
+                    }
+                ]
+            },
+            options: { 
+                scales: {y: {beginAtZero: true} },
+            }
+        }
+    );
+}
+
+const colors_0 = "#e60049";
+const colors = ["#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0"];
+
+function createChartByDataset(table_id, column_index, chart_label) {
+    const canvas = document.querySelector(`canvas.bar-chart[id="${table_id}_${chart_label}"]`);
     const tables = document.querySelectorAll(`table.${table_id}`); 
     var models_metrics = {};
-    var plot_colors = [];
+    var plot_bar_colors = [];
+    var plot_bar_border_colors = [];
     for (var i = 0; i < tables.length; ++i){
         const table = tables[i];
         const rows = table.getElementsByTagName('tr');
@@ -34,37 +71,27 @@ function createChart(table_id, column_index, chart_label) {
         no_new_items = Object.keys(models_metrics).length 
         models_metrics = Object.assign({}, models_metrics, m_m)
         no_new_items = Object.keys(models_metrics).length - no_new_items
-        plot_colors = plot_colors.concat(Array(no_new_items).fill(colors[i%colors.length]));
-    } 
-    plot_colors[0] = colors_0;
-    console.log(models_metrics)
-    new Chart(
-    canvas, 
-        {
-            type: 'bar',
-            data: {
-                labels: Object.keys(models_metrics),
-                datasets: [
-                    {
-                    label: chart_label,
-                    data: Object.values(models_metrics),
-                    borderWidth: 1,
-                    barThickness: 20,
-                    backgroundColor: plot_colors,
-                    }
-                ]
-            },
-            options: { 
-                scales: {y: {beginAtZero: true} },
-            }
+
+        new_colors = Array(no_new_items).fill(colors[i%colors.length])
+        plot_bar_colors = plot_bar_colors.concat(new_colors)
+        new_colors[0] = colors_0
+        if (i == 0) {
+            new_colors[1] = colors_0
         }
-    );
+        plot_bar_border_colors = plot_bar_border_colors.concat(new_colors)
+
+    }
+    plot_bar_colors[0] = colors_0;
+    // plot_bar_border_colors[0] = colors_0;
+    createChart(canvas, models_metrics, plot_bar_colors, plot_bar_border_colors, chart_label)    
 }
 
 window.addEventListener("load", function(){
-    createChart("bprmax", 8, "Recall@20");
-    createChart("xe", 8, "Recall@20");
     changeTableCSS();
+    createChartByDataset("bprmax", 8, "Recall@20");
+    createChartByDataset("xe", 8, "Recall@20");
+    createChartByDataset("bprmax", 9, "MRR@20");
+    createChartByDataset("xe", 9, "MRR@20");
     const button = document.querySelector("button.theme-switch-button");
     button.addEventListener("click", changeTableCSS);
 });

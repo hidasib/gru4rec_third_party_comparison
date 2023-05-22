@@ -7,25 +7,52 @@ Description and some text for the Rees46 dataset.
 
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
 .. tab-set::
 
-   .. tab-item:: BPR-Max
-      :sync: key_sub_1
+      .. tab-item:: Recall\@20
 
-      .. raw:: html
+         .. tab-set::
 
-         <div class=chart-container>
-            <canvas class="bar-chart" id="bprmax"></canvas>
-         </div>
+            .. tab-item:: BPR-Max
+               :sync: key_sub_1
 
-   .. tab-item:: Cross-Entropy
-      :sync: key_sub_2
+               .. raw:: html
 
-      .. raw:: html
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="bprmax_Recall@20"></canvas>
+                  </div>
 
-         <div class=chart-container>
-            <canvas class="bar-chart" id="xe"></canvas>
-         </div>
+            .. tab-item:: Cross-Entropy
+               :sync: key_sub_2
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="xe_Recall@20"></canvas>
+                  </div>
+
+      .. tab-item:: MRR\@20
+
+         .. tab-set::
+
+            .. tab-item:: BPR-Max
+               :sync: key_sub_1
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="bprmax_MRR@20"></canvas>
+                  </div>
+
+            .. tab-item:: Cross-Entropy
+               :sync: key_sub_2
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="xe_MRR@20"></canvas>
+                  </div>
 
 
 ------------------------------------------------------------------
