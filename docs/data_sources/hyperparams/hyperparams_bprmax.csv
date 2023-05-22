@@ -1,0 +1,10 @@
+parameter,type,range,step,scale
+layers,int,[64..512],32,Uniform
+batch_size,int,[32..256],16,Uniform
+learning_rate,float,[0.01..0.25],0.005,Uniform
+dropout_p_embed,float,[0.0..0.5],0.05,Uniform
+dropout_p_hidden,float,[0.0..0.7],0.05,Uniform
+momentum,float,[0.0..0.9],0.05,Uniform
+sample_alpha,float,[0.0..1.0],0.1,Uniform
+bpreg,float,[0.0..2.0],0.05,Uniform
+final_act,categorical,"options: [elu-0.5,elu-1,linear]",

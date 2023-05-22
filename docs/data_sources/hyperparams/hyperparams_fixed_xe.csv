@@ -1,0 +1,8 @@
+parameter,value
+loss,cross-entropy
+final_act,softmax
+logq,1
+bpreg,0
+n_sample,2048
+adapt,adagrad
+n_epochs,10

@@ -1,0 +1,6 @@
+parameter,value
+loss,bpr-max
+logq,0
+n_sample,2048
+adapt,adagrad
+n_epochs,10
