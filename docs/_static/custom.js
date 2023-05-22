@@ -55,6 +55,9 @@ const colors = ["#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4"
 
 function createChartByDataset(table_id, column_index, chart_label) {
     const canvas = document.querySelector(`canvas.bar-chart[id="${table_id}_${chart_label}"]`);
+    if (canvas == null) {
+        return;
+    }
     const tables = document.querySelectorAll(`table.${table_id}`); 
     var models_metrics = {};
     var plot_bar_colors = [];
