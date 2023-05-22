@@ -17,7 +17,7 @@ function changeTableCSS() {
 
 function createChart(canvas, models_metrics, plot_bar_colors, plot_bar_border_colors, chart_label) {
     let screen_width = document.documentElement.clientWidth;
-    if (screen_width > 992) {
+    if ((screen_width > 992) || (window.orientation > 0)) {
         border_width = 3 //6.5
         bar_thickness = 30
     }
