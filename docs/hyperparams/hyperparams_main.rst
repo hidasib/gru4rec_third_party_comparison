@@ -9,7 +9,7 @@ Fixed Hyperparameters
 
 These setups are defined by setting te *constrained_embedding* and *embedding* parameters to one of the following combinations:
 
-.. csv-table:: Setups
+.. csv-table:: Combinations
     :class: striped_table
     :file: /data_sources/hyperparams/hyperparams_setups.csv
     :header-rows: 1
@@ -38,7 +38,7 @@ And by fixing the following hyperparameters:
 Optimized Hyperparameters
 ------------------------------------------------------------------
 
-For each setup and fixed hyperparameters the following hyperparameters are optimized:
+For each setup the following hyperparameters are optimized:
 
 .. tab-set::
 
