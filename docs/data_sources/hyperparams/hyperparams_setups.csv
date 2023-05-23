@@ -1,4 +1,4 @@
-setup,constrained_embedding,embedding
+combination,constrained_embedding,embedding
 setup 1,True,0
 setup 2,False,0
 setup 3,False,matching layers
