@@ -1,44 +1,77 @@
 # README
+​
 ## Usage
-- Clone the rope
-- Use the following commands in the root folder of the repo
-    - *git submodule update --init*
+​
+To get started with this repository, follow the instructions below:
+​
+1. Clone the repository.
+​
+2. In the root folder of the repository, run the following command to initialize the submodules:
+    ```shell
+    git submodule update --init --recursive
+    ```
+
 ## Environments
-- Setup for the third party implementation
-    - install anaconda: https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation (either Anaconda or Miniconda is ok)
-    - Pytorch for GRU4REC-pytorch and Torch-GRU4Rec
-        - The packages for the pytorch versions can be found in *gru4rec_conda_pytorch_env.yaml*
-        - To create then environment run:
-            - *conda env create -f gru4rec_conda_pytorch_env.yaml*
-    - Tesnorflow for GRU4Rec_TensorFlow and KerasGRU4Rec
-        - The packages for the pytorch versions can be found in *gru4rec_conda_tensorflow_env.yaml*
-            - To create then environment run:
-                - *conda env create -f gru4rec_conda_tensorflow_env.yaml*
-    - Pytorch for recpack
-        - The packages for this versions can be found in *gru4rec_conda_recpack_env.yaml*
-            - To create then environment run:
-                - *conda env create -f gru4rec_conda_recpack_env.yaml*
-    - Now you can *activate* the environments by running either
-        - *conda activate gru4rec_tensorflow*
-        - *conda activate gru4rec_pytorch*
-        - *conda activate gru4rec_recpack*
-    - Or *deactivate* them
-        - *conda deactivate*
-- Requirements for the original implementation
-    - https://github.com/hidasib/GRU4Rec/blob/87971fe397c4b44e6c7c2c0c7333cbe6e08a545d/README.md#requirements
-- When using the notebooks, select the correct python interpreter, which is located in the directory of the correct conda environment.
+
+### Third Party Implementations
+
+Before running the code in this repository, you need to set up the necessary environments.
+
+1. Install Anaconda by following the instructions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation). You can choose either Anaconda or Miniconda.
+
+2. For GRU4REC-pytorch and Torch-GRU4Rec, you need to install PyTorch. The required packages for the PyTorch versions can be found in `gru4rec_conda_pytorch_env.yaml`. To create the environment, run the following command:
+    ```shell
+    conda env create -f gru4rec_conda_pytorch_env.yaml
+    ```
+3. For GRU4Rec_TensorFlow and KerasGRU4Rec, you need to install TensorFlow. The required packages for the TensorFlow versions can be found in `gru4rec_conda_tensorflow_env.yaml`. To create the environment, run the following command:
+    ```shell
+    conda env create -f gru4rec_conda_tensorflow_env.yaml
+    ```
+4. For recpack, you need to install PyTorch. The required packages for this version can be found in `gru4rec_conda_recpack_env.yaml`. To create the environment, run the following command:
+    ```shell
+    conda env create -f gru4rec_conda_recpack_env.yaml
+    ```
+5. Once the environments are created, you can activate them by running one of the following commands:
+    - For TensorFlow environment:
+        ```shell
+        conda activate gru4rec_tensorflow
+        ```
+    - For PyTorch environment:
+        ```shell
+        conda activate gru4rec_pytorch
+        ```
+    - For recpack environment:
+        ```shell
+        conda activate gru4rec_recpack
+        ```
+6. To deactivate the environment, run the following command:
+    ```shell
+    conda deactivate
+    ```
+
+### Original Implementation
+​
+Please refer to the [requirements](https://github.com/hidasib/GRU4Rec/blob/87971fe397c4b44e6c7c2c0c7333cbe6e08a545d/README.md#requirements) mentioned in the repository for more details.
+​
 ## Examples
-- An example Jupyter Notebook for each model is provided, with description on how to run the experiments.
+​
+This repository provides an example Jupyter Notebook for each model, along with descriptions on how to run the experiments. Refer to the notebooks for detailed instructions.
+​
 ## Download link to the datasets
+​
 - Yoochoose:
-    - https://2015.recsyschallenge.com/
-    - https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015
-- Rees46: 
-    - https://rees46.com/en/open-cdp
-    - https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
-- Coveo: 
-    - https://www.coveo.com/en/ailabs/shopper-intent-prediction-from-clickstream-e-commerce-data-with-minimal-browsing-information
-- Diginetica: 
-    - https://competitions.codalab.org/competitions/11161#learn_the_details-data2
-- Retailrocket: 
-    - https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+    - [Official Website](https://2015.recsyschallenge.com/)
+    - [Kaggle Dataset](https://www.kaggle.com/datasets/chadgostopp/recsys-challenge-2015)
+​
+- Rees46:
+    - [Official Website](https://rees46.com/en/open-cdp)
+    - [Kaggle Dataset](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store)
+​
+- Coveo:
+    - [Official Download Link](https://www.coveo.com/en/ailabs/shopper-intent-prediction-from-clickstream-e-commerce-data-with-minimal-browsing-information)
+​
+- Diginetica:
+    - [Official Download Link](https://competitions.codalab.org/competitions/11161#learn_the_details-data2)
+​
+- Retailrocket:
+    - [Kaggle Dataset](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
