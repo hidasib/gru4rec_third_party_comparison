@@ -1,13 +1,13 @@
 Hyperparameters
 ==================================================================
 
-The hyperparameters were tuned for 3 different setups for BPR-Max and Cross-Entropy respectively. We than chosse the best performing setup with the best hyperparameters (1-1 for both BPR-Max and Cross-Entropy), and use it in our experiments.
+The hyperparameters were tuned for 3 different setups for BPR-Max and Cross-Entropy respectively. We select the best performing setup with the best hyperparameters (1-1 for both BPR-Max and Cross-Entropy), and use it in our experiments.
 
 ------------------------------------------------------------------
 Fixed Hyperparameters
 ------------------------------------------------------------------
 
-These setups are defined by setting te *constrained_embedding* and *embedding* parameters to one of the following combinations:
+These setups are defined by setting the *constrained_embedding* and *embedding* parameters to one of the following combinations:
 
 .. csv-table:: Combinations
     :class: striped_table
