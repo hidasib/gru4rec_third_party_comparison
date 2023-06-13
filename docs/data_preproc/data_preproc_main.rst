@@ -11,14 +11,14 @@ General steps
     they describe the sequences for the next-click prediction task.
 
 2. step 
-    Sessionisation of user histories.
+    Sessionisation of user histories. When no session information is available, the sessions are computed using 1 hour as the session gap threshold. If the sessions are precomputed, the precomputed IDs are used.
 
 3. step
-    Keeping only the necessary data: session ID, item ID, timestamp
+    Any unnecessary data is discarded. Only the necessary data is kept: session ID, item ID, timestamp
 
 4. step
     Subsequent repeating item filtration.  If the user visits the 
-    same item multiple times in succession, only the first occurrence is kept.
+    same item multiple times in succession, only the first occurrence is kept. E.g. *(i,i,j)* is reduced to *(i,j)*, but *(i,i,j)* is not modified.
 
 5. step
     The dataset is iteratively filtered for sessions shorter than 2 and items
@@ -48,19 +48,19 @@ Dataset specific steps
             b) item ID and user ID is reindexed with integers to allow faster data sorting (the final dataset will contain the original IDs). 
             c) *view* events are used
         
+        2. step
+            - session gap threshold is 1 hour
+
         6. step
-            - *tday* is 1 day (86400 s) for the Rees46
+            - *tday* is 1 day (86400 sec) for the Rees46
 
     .. tab-item:: Yoochoose
 
         1. step
-            *clicks* and *test* files are concatenated
-
-        2. step
-            The sessions are precomputed, we use these.
+            a) *clicks* and *test* files are concatenated
 
         6. step
-            *tday* is 1 for Yoochoose
+            - *tday* is 1 for Yoochoose
 
     .. tab-item:: Coveo
         
@@ -68,7 +68,7 @@ Dataset specific steps
             a) *detail* events are used
         
         6. step
-            *tday* is 1 for Coveo
+            - *tday* is 1 for Coveo
 
     .. tab-item:: Diginetica
 
@@ -76,13 +76,16 @@ Dataset specific steps
             a) Timestamps are computed from the day of the first query and the elapsed time.
 
         6. step
-            *tday* is 7 for Diginetica
+            - *tday* is 7 for Diginetica
 
     .. tab-item:: Retailrocket
         
         1. step
             a) *view* events are used
 
+        2. step
+            - session gap threshold is 1 hour
+
         6. step
-            *tday* is 7 for Retailrocket
+            - *tday* is 7 for Retailrocket
     
