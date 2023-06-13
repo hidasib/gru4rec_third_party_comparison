@@ -49,36 +49,16 @@ html_theme_options = {
     "use_repository_button": True,
 #     "logo": {
 #         "text": "GRU4Rec Third Party Experiments",
-#         # "image_light": "_static/Taboola_Icon_Dark_Blue.png",
-#         # "image_dark": "_static/Taboola_Icon_Dark_Blue.png",
-#         "image_light": "_static/Taboola_Logo_Dark_Blue.png",
-#         "image_dark": "_static/Taboola_Logo_Dark_Blue.png",
+#         "image_light": "_static/asd_dark.png",
+#         "image_dark": "_static/asd_light.png",
 #    },
     "icon_links": [
         {
             "name": "Github Last Commit",
             "url": "https://github.com/hidasib/gru4rec_third_party_comparison/tree/master",
-            "icon": "https://img.shields.io/github/last-commit/hidasib/GRU4Rec/master?style=plastic",
+            "icon": "https://img.shields.io/github/last-commit/hidasib/gru4rec_third_party_comparison/master?style=plastic",
             "type": "url",
         },
-        # {
-        #     "name": "Email Balázs Hidasi",
-        #     "url": "mailto: balazs.h@taboola.com",
-        #     "icon": "https://img.shields.io/static/v1?style=plastic&logo=gmail&label=Email&message=balazs.h@taboola.com&labelColor=gray&color=lightgray",
-        #     "type": "url",
-        # },
-        # {
-        #     "name": "Email Ádám Czapp",
-        #     "url": "mailto: adam-tibor.c@taboola.com",
-        #     "icon": "https://img.shields.io/static/v1?style=plastic&logo=gmail&label=Email&message=adam-tibor.c@taboola.com&labelColor=gray&color=lightgray",
-        #     "type": "url",
-        # },
-        # {
-        #     "name": "Twitter Balázs Hidasi",
-        #     "icon": "https://img.shields.io/static/v1?style=plastic&logo=twitter&label=Follow&message=@balazshidasi&labelColor=gray&color=lightgray",
-        #     "url": "https://twitter.com/balazshidasi",
-        #     "type": "url",
-        # },
     ],
 }
 
