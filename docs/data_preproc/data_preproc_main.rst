@@ -73,7 +73,7 @@ Dataset specific steps
     .. tab-item:: Diginetica
 
         1. step
-            a) Timestamps are computed from the day of the first query and the elapsed time.
+            a) timestamps are computed from the *eventdate* of the a session's first event and the *timeframe* (elapsed time since the first event).
 
         6. step
             - *tday* is 7 for Diginetica
