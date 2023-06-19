@@ -7,9 +7,9 @@ The hyperparameters were tuned for 3 different setups for BPR-Max and Cross-Entr
 Fixed Hyperparameters
 ------------------------------------------------------------------
 
-These setups are defined by setting the *constrained_embedding* and *embedding* parameters to one of the following combinations:
+The setups are defined by setting the *constrained_embedding* and *embedding* parameters to one of the following combinations:
 
-.. csv-table:: Combinations
+.. csv-table:: Setups
     :class: striped_table
     :file: /data_sources/hyperparams/hyperparams_setups.csv
     :header-rows: 1
