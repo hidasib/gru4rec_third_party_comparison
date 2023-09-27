@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data Preprocessing &#8212; GRU4Rec Third Party Implementations</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_preproc/data_preproc_main';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hyperparameters" href="../hyperparams/hyperparams_main.html" />
+    <link rel="prev" title="GRU4Rec Third Party Implementations" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">GRU4Rec Third Party Implementations</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" title="Github Last Commit" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://img.shields.io/github/last-commit/hidasib/gru4rec_third_party_comparison/master?style=plastic" class="icon-link-image" alt="Github Last Commit"/></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hyperparams/hyperparams_main.html">Hyperparameters</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master">Source Code on GitHub</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exp_data/exp_dataset.html">By Dataset</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/rees46/rees46_main.html">Rees46</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/yoochoose/yoochoose_main.html">Yoochoose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/coveo/coveo_main.html">Coveo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/retailrocket/retailrocket_main.html">Retailrocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/diginetica/diginetica_main.html">Diginetica</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exp_impl/exp_implementations.html">By Implementation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/gru4rec_pytorch/gru4rec_pytorch_main.html">GRU4REC-pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/torch_gru4rec/torch_gru4rec_main.html">Torch-GRU4Rec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/recpack/recpack_main.html">Recpack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/gru4rec_tensorflow/gru4rec_tensorflow_main.html">GRU4Rec_Tensorflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/keras_gru4rec/keras_gru4rec_main.html">KerasGRU4Rec</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../additional_resources/paper.html">Research paper</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://arxiv.org/abs/2307.14956">Preprint version (arXiv)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3609487">RecSys'23 version (ACM DL) PyTorch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../additional_resources/qa.html">Presentation Q&amp;A</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../additional_resources/official_impl.html">Official GRU4rec implementations</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec">Original (Theano)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_PyTorch_Official">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_Tensorflow_Official">Tensorflow</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/data_preproc/data_preproc_main.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Preprocessing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-steps">General steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-steps">Dataset specific steps</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="data-preprocessing">
+<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this heading">#</a></h1>
+<section id="general-steps">
+<h2>General steps<a class="headerlink" href="#general-steps" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>step</dt><dd><p>Only view / click / detail events are kept, depending on the dataset.
+These events represent the user visiting an item’s detail page, thus
+they describe the sequences for the next-click prediction task.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><p>Sessionisation of user histories. When no session information is available, the sessions are computed using 1 hour as the session gap threshold. If the sessions are precomputed, the precomputed IDs are used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><p>Any unnecessary data is discarded. Only the necessary data is kept: session ID, item ID, timestamp</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><p>Subsequent repeating item filtration.  If the user visits the
+same item multiple times in succession, only the first occurrence is kept. E.g. <em>(i,i,j)</em> is reduced to <em>(i,j)</em>, but <em>(i,i,j)</em> is not modified.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><p>The dataset is iteratively filtered for sessions shorter than 2 and items
+occurring less than 5 times until there is no change in the dataset.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>step</dt><dd><p>Time based train and test splits. The number of test days are defined for each dataset (<em>tday</em>, defined in seconds) yielding a split time <em>tsplit</em>. <em>tsplit</em> is calculated by substracting <em>tday</em> from the last timestamp of the dataset. We create a <em>train_full</em> and <em>test</em> dataset. Session starting after <em>tsplit</em> are assigned to <em>test</em>. Events with timestamps smaller than <em>tsplit</em> are assigned to <em>train_full</em>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>Note<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">After this step <em>train_full</em> may contain sessions with only one event, these are discarded.</p>
+</div>
+</details><p>This process is repeated for <em>train_full</em> yielding <em>train_tr</em> and <em>train_valid</em></p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="dataset-specific-steps">
+<h2>Dataset specific steps<a class="headerlink" href="#dataset-specific-steps" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Rees46</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>step</dt><dd><ol class="loweralpha simple">
+<li><p>The October and November dataset is concatenated</p></li>
+<li><p>item ID and user ID is reindexed with integers to allow faster data sorting (the final dataset will contain the original IDs).</p></li>
+<li><p><em>view</em> events are used</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p>session gap threshold is 1 hour</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p><em>tday</em> is 1 day (86400 sec) for the Rees46</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Yoochoose</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>step</dt><dd><ol class="loweralpha simple">
+<li><p><em>clicks</em> and <em>test</em> files are concatenated</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p><em>tday</em> is 1 for Yoochoose</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Coveo</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>step</dt><dd><ol class="loweralpha simple">
+<li><p><em>detail</em> events are used</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p><em>tday</em> is 1 for Coveo</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Diginetica</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>step</dt><dd><ol class="loweralpha simple">
+<li><p>timestamps are computed from the <em>eventdate</em> of the a session’s first event and the <em>timeframe</em> (elapsed time since the first event).</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p><em>tday</em> is 7 for Diginetica</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Retailrocket</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>step</dt><dd><ol class="loweralpha simple">
+<li><p><em>view</em> events are used</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p>session gap threshold is 1 hour</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><dl class="simple">
+<dt>step</dt><dd><ul class="simple">
+<li><p><em>tday</em> is 7 for Retailrocket</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GRU4Rec Third Party Implementations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../hyperparams/hyperparams_main.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hyperparameters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-steps">General steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-steps">Dataset specific steps</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Balázs Hidasi & Ádám Czapp
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <div class="footer-flex">
+    <a class="footer-banner" href="https://x.com/balazshidasi", target="_blank">
+        <img src="https://img.shields.io/static/v1?style=plastic&logo=x&label=Follow&message=@balazshidasi&labelColor=gray&color=lightgray" alt="Follow Balázs Hidasi at X.com" >
+    </a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

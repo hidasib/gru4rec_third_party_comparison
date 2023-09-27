@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Presentation Q&amp;A &#8212; GRU4Rec Third Party Implementations</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'additional_resources/qa';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Official GRU4rec implementations" href="official_impl.html" />
+    <link rel="prev" title="Research paper" href="paper.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">GRU4Rec Third Party Implementations</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" title="Github Last Commit" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://img.shields.io/github/last-commit/hidasib/gru4rec_third_party_comparison/master?style=plastic" class="icon-link-image" alt="Github Last Commit"/></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../data_preproc/data_preproc_main.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hyperparams/hyperparams_main.html">Hyperparameters</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master">Source Code on GitHub</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Results</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exp_data/exp_dataset.html">By Dataset</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/rees46/rees46_main.html">Rees46</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/yoochoose/yoochoose_main.html">Yoochoose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/coveo/coveo_main.html">Coveo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/retailrocket/retailrocket_main.html">Retailrocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_data/diginetica/diginetica_main.html">Diginetica</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exp_impl/exp_implementations.html">By Implementation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/gru4rec_pytorch/gru4rec_pytorch_main.html">GRU4REC-pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/torch_gru4rec/torch_gru4rec_main.html">Torch-GRU4Rec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/recpack/recpack_main.html">Recpack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/gru4rec_tensorflow/gru4rec_tensorflow_main.html">GRU4Rec_Tensorflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exp_impl/keras_gru4rec/keras_gru4rec_main.html">KerasGRU4Rec</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="paper.html">Research paper</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://arxiv.org/abs/2307.14956">Preprint version (arXiv)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3609487">RecSys'23 version (ACM DL) PyTorch</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Presentation Q&amp;A</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="official_impl.html">Official GRU4rec implementations</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec">Original (Theano)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_PyTorch_Official">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_Tensorflow_Official">Tensorflow</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/additional_resources/qa.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Presentation Q&A</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation-slides-only">Presentation (slides only)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q-a">Q&amp;A</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="presentation-q-a">
+<h1>Presentation Q&amp;A<a class="headerlink" href="#presentation-q-a" title="Permalink to this heading">#</a></h1>
+<p>Detailed answers to the questions we received through Slido after the presentation of this work at RecSys’23 on 20th September 2023 in Singapore.</p>
+<section id="presentation-slides-only">
+<h2>Presentation (slides only)<a class="headerlink" href="#presentation-slides-only" title="Permalink to this heading">#</a></h2>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/5XWwL4pRmQE9n9?startSlide=1" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/balazshidasi/the-effect-of-third-party-implementations-on-reproducibility" title="The Effect of Third Party Implementations on Reproducibility" target="_blank">The Effect of Third Party Implementations on Reproducibility</a></strong></section>
+<section id="q-a">
+<h2>Q&amp;A<a class="headerlink" href="#q-a" title="Permalink to this heading">#</a></h2>
+<p><strong>Q: How did you consolidate the errors of re-implementations?</strong></p>
+<p>A: We looked at the code and identified differences to the original. These could fall into two categories: (1) something is missing (e.g. one of the 8 core features of the algorithm, or one of the hyperparameters governing some part of the original); (2) something is different to the original (e.g. does something else, or buggy). We refer to (2) as implementation errors. These then were categorized into the 5 categories you saw in the presentation. A comprehensive list of errors for each reimplementation is in the paper. We fixed errors, except for core errors - for which we would have needed to rewrite a significant portion of the code. We didn’t add back any of the missing features/hyperparameters. We forked each of the third-party reimplementations and added fixes on various levels. Our improved versions can run on any of the levels we used in our experiments (out-of-the-box, inference fix, minor fix, major fix). You can find these versions of the reimplementations in the project’s repo as submodules.</p>
+<hr><p><strong>Q: How should we choose the implementation in using industry? Does the only thing we can do is compare all implementations?</strong></p>
+<p>A: I would suggest using the official implementation, if it exists. An official version can still be buggy, but at least it can reproduce the results that were reported by the authors.</p>
+<p>If the official implementation is not fit for production use (e.g. too slow) or not available at all, then you might want to look for a third-party implementation or reimplement it on your own. The important thing here is that the reimplementation needs to be validated against the original. This is fairly straightforward if there is an official code, you just need to get very similar results on a few datasets using different hyperparameter settings. The reality now is that the task of this validation falls to whoever wants to use the algorithm. Hopefully this will change in the future. The ideal situation would be if public reimplementations would be validated by their authors (or an independent third-party) and the process and results of the validation would be available on their sites for those who are interested in using them.</p>
+<p>Validation is much trickier if there is no official code available, because the only crutch you can lean on is the algorithm’s description in the paper and the validation criteria are the results reported in the paper. However, there might be cases when these results are not reproducible (e.g. the author’s private implementation had a bug, or the algorithm is not described in enough detail, or the datasets used are proprietary).</p>
+<hr><p><strong>Q: Has the situation with authors implementing their own algorithms improved over time?</strong></p>
+<p>A: It is hard to say. The six reimplementations we examined in the paper and the other two we mentiones were published between 2017 and 2022 and we couldn’t really see big differences between them regarding quality. However, during the conference we were approached by authors of other reimplementations that seemed to be better overall, even if not perfect. Moreover, the authors seemed willing (sometimes even enthusiastic) to learn about what their version is missing and improving their implementation. I really hope that our paper also inspired (past and future) authors of other algorithms and the authors of the six reimplementations we looked at to do the same and improve their work.</p>
+<hr><p><strong>Q: You mention that other people’s work is very *flawed*. A strong claim. I’m very curious how the authors react when you approached them asking to fix their bugs?</strong></p>
+<p>A: We hadn’t approached any author directly yet, due to the requirements of the research project and due to the lack of time. So, in a sense, I’m also curious how they will react when they see our analysis. We were approached by two authors before the conference (one directly impacted by our analysis, and one indirectly impacted) and their reactions to our work were professional. I hope that the reaction from other authors will be positive as well, because we didn’t just point out flaws in general, we also provided a comprehensive list for each reimplementation, as well as fixes for any, but the core errors. These are made available as part of the experimentation code of this project. (Of course, there is much to be done on top of this, we didn’t add missing features and hyperparameters &amp; didn’t fix core errors.)</p>
+<p>During the conference, we were approached by other groups who had reimplementations on their own and they received the paper positively. They seemed willing (sometimes even enthusiastic) to learn about what their version is missing and improve their implementation. I really hope that our paper also inspired (past and future) authors of other algorithms and the authors of the six reimplementations we looked at to do the same and improve their work.</p>
+<p>As for the use of the word “flawed”. It might be a strong word, but we also consider it just to be a state that can temporarily apply to a work. Of course, everyone should aim to do their work to the best of their knowledge, but mistakes do happen. Since everybody can and does make mistakes, a work being flawed is not a big deal if it is corrected once the flaw is revealed &amp; the effects of it are mitigated as much as possible.</p>
+<p>This work does NOT mean to be an attack on anyone’s work and especially not on any individual. To ensure this, we checked as many reimplementations as was possible to avoid singling out a specific one and we are avoiding discussing certain aspects related to our findings. The goal of this work is to highlight this serious issue that has a significant negative impact on our research community and tthe reproducibility/validity of the research results in general.</p>
+<hr><p><strong>Q: How does your re-implementation compare against the original implementation? Did you find differences between them due to factors outside of your control?</strong></p>
+<p>A: We tested our reimplementations against the original on five datasets under various settings. The results are generally in line with the original. The biggest relative difference I observed is less than 1%, which is less than what I observe between subsequent runs of the original code (and this latter is due to the non-deterministic order of operations on the GPU, as well as the lack of grouping the indexed gradients in the original). If the grouping of the indexed gradients is added to the original the largest observed relative difference in metrics becomes less than 0.5%. Due to discrepancies between online-offline evaluation, anything under 5% relative difference in Recall/MRR/NDCG can be considered to be on the same performance level (as these small uplifts rarely translate into any improvement when tested online). Therefore I think that this small deviation is acceptable.</p>
+<p>Overall, there were two things outside of our control: (1) speed of the framework; (2) aggregating indexed gradients in PyTorch.
+(1) We couldn’t make the reimplementations as quick as the original, because both PyTorch and TF pass the control back and forth between the python and the C++/CUDA code during the processing of a minibatch that adds an additional overhead. Theano compiles the computational graph so it has no such overhead. The public version of GRU4Rec uses IDs only, so in general, processing a minibatch is quite fast, thus the overhead of PyTorch and TF becomes significant. In theory, PyTorch2 would be able to compile the graph, but this compilation doesn’t work with “sparse” embeddings, which is the usual way one uses embeddings (i.e. select a few indexes from many, update only those) and I couldn’t work around this. In TF, we use <cite>tf.function</cite>, without that it is unbearably slow. While <cite>tf.function`</cite> seems to do many things, it doesn’t seem to compile the graph into a monolithic C++/CUDA function.
+(2) Aggregating indexed gradients before backpropagation is actually the correct way. PyTorch somewhat enforces this, while it is not in the original implementation (it didn’t matter that much and needed a custom operator that I implemented much later). This accounts for a little difference, but nothing significant. I might add gradient aggregation to the original to eliminate the difference. But I must think this through from the perspective of reproducibility.</p>
+<p>Other than these two, there were a few occasions where I couldn’t use the built-in modules: GRU has many different implementations, the original GRU4Rec uses the one from the first GRU paper, but it is not the one implemented in PyTorch or TF. Also, for some reason, the Adagrad optimizers of both PyTorch and TF don’t work with Nesterov’s momentum, even though it can improve performance. Writing these modules is fairly straightforward but requires some knowledge on how GRU or optimizers work.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="paper.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Research paper</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="official_impl.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Official GRU4rec implementations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation-slides-only">Presentation (slides only)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q-a">Q&amp;A</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Balázs Hidasi & Ádám Czapp
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <div class="footer-flex">
+    <a class="footer-banner" href="https://x.com/balazshidasi", target="_blank">
+        <img src="https://img.shields.io/static/v1?style=plastic&logo=x&label=Follow&message=@balazshidasi&labelColor=gray&color=lightgray" alt="Follow Balázs Hidasi at X.com" >
+    </a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

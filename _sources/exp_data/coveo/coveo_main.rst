@@ -1,0 +1,490 @@
+Coveo
+==================================================================
+This dataset was released for the purpose of shopper intent prediction from clickstream data as part of the SIGIR Ecom 2021 Challenge. The dataset consists of user sessions using 30 minutes as the session gap threshold. The data was collected by Coveo from one of it’s partner’s e-commerce site. There are five types of events: *add*, *click*, *detail*, *purchase* and *remove*. *Detail* events correspond to the user visiting the detail page of an item (similarly to view events in e.g. Yoochoose). We use only these *detail* events to build the sessions.
+
+.. raw:: html
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+.. tab-set::
+
+      .. tab-item:: Recall\@20
+
+         .. tab-set::
+
+            .. tab-item:: BPR-Max
+               :sync: key_sub_1
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="bprmax_Recall@20"></canvas>
+                  </div>
+
+            .. tab-item:: Cross-Entropy
+               :sync: key_sub_2
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="xe_Recall@20"></canvas>
+                  </div>
+
+      .. tab-item:: MRR\@20
+
+         .. tab-set::
+
+            .. tab-item:: BPR-Max
+               :sync: key_sub_1
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="bprmax_MRR@20"></canvas>
+                  </div>
+
+            .. tab-item:: Cross-Entropy
+               :sync: key_sub_2
+
+               .. raw:: html
+
+                  <div class=chart-container>
+                     <canvas class="bar-chart" id="xe_MRR@20"></canvas>
+                  </div>
+
+
+------------------------------------------------------------------
+GRU4REC-pytorch
+------------------------------------------------------------------
+
+.. tab-set::
+
+   .. tab-item:: Metric
+      :sync: key1
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metrics
+               :class: striped_table, bprmax
+               :file: /data_sources/results/coveo_gru4rec_pytorch_metrics_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metrics
+               :class: striped_table, xe
+               :file: /data_sources/results/coveo_gru4rec_pytorch_metrics_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Metric Diff
+      :sync: key2
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_metrics_change_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_metrics_change_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Hyperparameters
+      :sync: key3
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_hyperp_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_pytorch_times_cross-entropy.csv
+               :header-rows: 1
+
+------------------------------------------------------------------
+Torch-GRU4Rec
+------------------------------------------------------------------
+
+.. tab-set::
+
+   .. tab-item:: Metric
+      :sync: key1
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metrics
+               :class: striped_table, bprmax
+               :file: /data_sources/results/coveo_torch_gru4rec_metrics_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metrics
+               :class: striped_table, xe
+               :file: /data_sources/results/coveo_torch_gru4rec_metrics_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Metric Diff
+      :sync: key2
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_metrics_change_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_metrics_change_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Hyperparameters
+      :sync: key3
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_hyperp_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_torch_gru4rec_times_cross-entropy.csv
+               :header-rows: 1
+   
+
+------------------------------------------------------------------
+Recpack
+------------------------------------------------------------------
+
+.. tab-set::
+
+   .. tab-item:: Metric
+      :sync: key1
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metrics
+               :class: striped_table, bprmax
+               :file: /data_sources/results/coveo_recpack_metrics_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metrics
+               :class: striped_table, xe
+               :file: /data_sources/results/coveo_recpack_metrics_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Metric Diff
+      :sync: key2
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_metrics_change_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_metrics_change_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Hyperparameters
+      :sync: key3
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_hyperp_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_times_bpr-max.csv
+               :header-rows: 1
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_recpack_times_cross-entropy.csv
+               :header-rows: 1
+
+------------------------------------------------------------------
+GRU4Rec_Tensorflow
+------------------------------------------------------------------
+
+.. tab-set::
+
+   .. tab-item:: Metric
+      :sync: key1
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by GRU4Rec_Tensorflow
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metrics
+               :class: striped_table, xe
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Metric Diff
+      :sync: key2
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by GRU4Rec_Tensorflow
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Hyperparameters
+      :sync: key3
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by GRU4Rec_Tensorflow
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by GRU4Rec_Tensorflow
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_times_cross-entropy.csv
+               :header-rows: 1
+
+------------------------------------------------------------------
+KerasGRU4Rec
+------------------------------------------------------------------
+
+.. tab-set::
+
+   .. tab-item:: Metric
+      :sync: key1
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by KerasGRU4Rec
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metrics
+               :class: striped_table, xe
+               :file: /data_sources/results/coveo_keras_gru4rec_metrics_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Metric Diff
+      :sync: key2
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by KerasGRU4Rec
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
+               :class: striped_table
+               :file: /data_sources/results/coveo_keras_gru4rec_metrics_change_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Hyperparameters
+      :sync: key3
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by KerasGRU4Rec
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Hyperparameters used in the experiment
+               :class: striped_table
+               :file: /data_sources/results/coveo_keras_gru4rec_hyperp_cross-entropy.csv
+               :header-rows: 1
+
+   .. tab-item:: Runtimes
+      :sync: key4
+
+      .. tab-set::
+
+         .. tab-item:: BPR-Max
+            :sync: key_sub_1
+
+            .. note::
+               BPR-Max is not supported by KerasGRU4Rec
+
+         .. tab-item:: Cross-Entropy
+            :sync: key_sub_2
+
+            .. csv-table:: Runtime metrics
+               :class: striped_table
+               :file: /data_sources/results/coveo_keras_gru4rec_times_cross-entropy.csv
+               :header-rows: 1

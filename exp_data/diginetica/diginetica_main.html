@@ -1,0 +1,3322 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Diginetica &#8212; GRU4Rec Third Party Implementations</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/custom.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'exp_data/diginetica/diginetica_main';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Implementations" href="../../exp_impl/exp_implementations.html" />
+    <link rel="prev" title="Retailrocket" href="../retailrocket/retailrocket_main.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">GRU4Rec Third Party Implementations</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" title="Github Last Commit" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://img.shields.io/github/last-commit/hidasib/gru4rec_third_party_comparison/master?style=plastic" class="icon-link-image" alt="Github Last Commit"/></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../data_preproc/data_preproc_main.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hyperparams/hyperparams_main.html">Hyperparameters</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master">Source Code on GitHub</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experiment Results</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../exp_dataset.html">By Dataset</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../rees46/rees46_main.html">Rees46</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yoochoose/yoochoose_main.html">Yoochoose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coveo/coveo_main.html">Coveo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../retailrocket/retailrocket_main.html">Retailrocket</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Diginetica</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../exp_impl/exp_implementations.html">By Implementation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../exp_impl/gru4rec_pytorch/gru4rec_pytorch_main.html">GRU4REC-pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exp_impl/torch_gru4rec/torch_gru4rec_main.html">Torch-GRU4Rec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exp_impl/recpack/recpack_main.html">Recpack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exp_impl/gru4rec_tensorflow/gru4rec_tensorflow_main.html">GRU4Rec_Tensorflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../exp_impl/keras_gru4rec/keras_gru4rec_main.html">KerasGRU4Rec</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_resources/paper.html">Research paper</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://arxiv.org/abs/2307.14956">Preprint version (arXiv)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3609487">RecSys'23 version (ACM DL) PyTorch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional_resources/qa.html">Presentation Q&amp;A</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional_resources/official_impl.html">Official GRU4rec implementations</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec">Original (Theano)</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_PyTorch_Official">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/hidasib/GRU4Rec_Tensorflow_Official">Tensorflow</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hidasib/gru4rec_third_party_comparison/tree/master" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/exp_data/diginetica/diginetica_main.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Diginetica</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gru4rec-pytorch">GRU4REC-pytorch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch-gru4rec">Torch-GRU4Rec</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recpack">Recpack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gru4rec-tensorflow">GRU4Rec_Tensorflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kerasgru4rec">KerasGRU4Rec</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="diginetica">
+<h1>Diginetica<a class="headerlink" href="#diginetica" title="Permalink to this heading">#</a></h1>
+<p>The dataset consists of user sessions collected over six months. The sessions were extracted from the search engine logs of an e-commerce site, and contain item page views that were preceded by search queries. The dataset doesn’t have exact timestamps, but each event has a property denoting the elapsed time since its session’s first query. The day of the first queries is also known. The dataset was released for the CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge.</p>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Recall&#64;20</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-2">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class=chart-container>
+   <canvas class="bar-chart" id="bprmax_Recall@20"></canvas>
+</div></div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-3">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<div class=chart-container>
+   <canvas class="bar-chart" id="xe_Recall@20"></canvas>
+</div></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+MRR&#64;20</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-4">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class=chart-container>
+   <canvas class="bar-chart" id="bprmax_MRR@20"></canvas>
+</div></div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-5">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<div class=chart-container>
+   <canvas class="bar-chart" id="xe_MRR@20"></canvas>
+</div></div>
+</div>
+</div>
+</div>
+<section id="gru4rec-pytorch">
+<h2>GRU4REC-pytorch<a class="headerlink" href="#gru4rec-pytorch" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-6">
+Metric</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-10">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table bprmax table" id="id1">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.2304</p></td>
+<td><p>0.1237</p></td>
+<td><p>0.3533</p></td>
+<td><p>0.1399</p></td>
+<td><p>0.4995</p></td>
+<td><p>0.1500</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>0.0365</p></td>
+<td><p>0.0365</p></td>
+<td><p>0.1283</p></td>
+<td><p>0.0675</p></td>
+<td><p>0.2066</p></td>
+<td><p>0.0778</p></td>
+<td><p>0.3141</p></td>
+<td><p>0.0851</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0006</p></td>
+<td><p>0.0006</p></td>
+<td><p>0.0020</p></td>
+<td><p>0.0011</p></td>
+<td><p>0.0039</p></td>
+<td><p>0.0013</p></td>
+<td><p>0.0070</p></td>
+<td><p>0.0015</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>0.0239</p></td>
+<td><p>0.0239</p></td>
+<td><p>0.0937</p></td>
+<td><p>0.0472</p></td>
+<td><p>0.1537</p></td>
+<td><p>0.0551</p></td>
+<td><p>0.2367</p></td>
+<td><p>0.0608</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>0.0277</p></td>
+<td><p>0.0277</p></td>
+<td><p>0.1070</p></td>
+<td><p>0.0543</p></td>
+<td><p>0.1747</p></td>
+<td><p>0.0632</p></td>
+<td><p>0.2616</p></td>
+<td><p>0.0692</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-11">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table xe table" id="id2">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.2220</p></td>
+<td><p>0.1181</p></td>
+<td><p>0.3414</p></td>
+<td><p>0.1339</p></td>
+<td><p>0.4874</p></td>
+<td><p>0.1440</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>0.0296</p></td>
+<td><p>0.0296</p></td>
+<td><p>0.1133</p></td>
+<td><p>0.0576</p></td>
+<td><p>0.1888</p></td>
+<td><p>0.0675</p></td>
+<td><p>0.2973</p></td>
+<td><p>0.0749</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0287</p></td>
+<td><p>0.0287</p></td>
+<td><p>0.0376</p></td>
+<td><p>0.0321</p></td>
+<td><p>0.0415</p></td>
+<td><p>0.0327</p></td>
+<td><p>0.0457</p></td>
+<td><p>0.0329</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>0.0321</p></td>
+<td><p>0.0321</p></td>
+<td><p>0.0415</p></td>
+<td><p>0.0357</p></td>
+<td><p>0.0457</p></td>
+<td><p>0.0363</p></td>
+<td><p>0.0503</p></td>
+<td><p>0.0366</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>0.0288</p></td>
+<td><p>0.0288</p></td>
+<td><p>0.1135</p></td>
+<td><p>0.0572</p></td>
+<td><p>0.1860</p></td>
+<td><p>0.0667</p></td>
+<td><p>0.2862</p></td>
+<td><p>0.0736</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-7">
+Metric Diff</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-12">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id3">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>-47.02%</p></td>
+<td><p>-47.02%</p></td>
+<td><p>-44.31%</p></td>
+<td><p>-45.41%</p></td>
+<td><p>-41.53%</p></td>
+<td><p>-44.39%</p></td>
+<td><p>-37.13%</p></td>
+<td><p>-43.22%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>-99.15%</p></td>
+<td><p>-99.15%</p></td>
+<td><p>-99.11%</p></td>
+<td><p>-99.14%</p></td>
+<td><p>-98.90%</p></td>
+<td><p>-99.07%</p></td>
+<td><p>-98.60%</p></td>
+<td><p>-98.99%</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>-65.34%</p></td>
+<td><p>-65.34%</p></td>
+<td><p>-59.33%</p></td>
+<td><p>-61.86%</p></td>
+<td><p>-56.49%</p></td>
+<td><p>-60.61%</p></td>
+<td><p>-52.62%</p></td>
+<td><p>-59.47%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>-59.74%</p></td>
+<td><p>-59.74%</p></td>
+<td><p>-53.55%</p></td>
+<td><p>-56.08%</p></td>
+<td><p>-50.55%</p></td>
+<td><p>-54.81%</p></td>
+<td><p>-47.62%</p></td>
+<td><p>-53.87%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-13">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id4">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id4" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>-54.28%</p></td>
+<td><p>-54.28%</p></td>
+<td><p>-48.96%</p></td>
+<td><p>-51.20%</p></td>
+<td><p>-44.68%</p></td>
+<td><p>-49.54%</p></td>
+<td><p>-39.00%</p></td>
+<td><p>-47.98%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>-55.59%</p></td>
+<td><p>-55.59%</p></td>
+<td><p>-83.08%</p></td>
+<td><p>-72.79%</p></td>
+<td><p>-87.86%</p></td>
+<td><p>-75.61%</p></td>
+<td><p>-90.62%</p></td>
+<td><p>-77.13%</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>-50.44%</p></td>
+<td><p>-50.44%</p></td>
+<td><p>-81.29%</p></td>
+<td><p>-69.74%</p></td>
+<td><p>-86.62%</p></td>
+<td><p>-72.89%</p></td>
+<td><p>-89.68%</p></td>
+<td><p>-74.58%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>-55.50%</p></td>
+<td><p>-55.50%</p></td>
+<td><p>-48.88%</p></td>
+<td><p>-51.59%</p></td>
+<td><p>-45.51%</p></td>
+<td><p>-50.15%</p></td>
+<td><p>-41.28%</p></td>
+<td><p>-48.90%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-8">
+Hyperparameters</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-14">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id5">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id5" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>OOB</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>Correct full</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0.15</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0.3</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0.9</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-15">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id6">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id6" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+<th class="head"><p>GRU4REC-pytorch</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>OOB</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>Correct full</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>0.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key4" for="sd-tab-item-9">
+Runtimes</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-16" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-16">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id7">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id7" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>8.02</p></td>
+<td></td>
+<td></td>
+<td><p>639.87</p></td>
+<td><p>81757.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>5.29</p></td>
+<td><p>0.66 x</p></td>
+<td></td>
+<td><p>969.27</p></td>
+<td><p>123869.00</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>32.24</p></td>
+<td><p>4.02 x</p></td>
+<td><p>6.09 x</p></td>
+<td><p>158.86</p></td>
+<td><p>20333.91</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>32.18</p></td>
+<td><p>4.01 x</p></td>
+<td><p>6.08 x</p></td>
+<td><p>159.20</p></td>
+<td><p>20378.12</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>36.76</p></td>
+<td><p>4.58 x</p></td>
+<td><p>6.95 x</p></td>
+<td><p>139.36</p></td>
+<td><p>17838.75</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-17" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-17">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id8">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id8" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>4.52</p></td>
+<td></td>
+<td></td>
+<td><p>1134.52</p></td>
+<td><p>144959.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4REC-pytorch params</p></td>
+<td><p>3.67</p></td>
+<td><p>0.81 x</p></td>
+<td></td>
+<td><p>1398.76</p></td>
+<td><p>178755.00</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB</p></td>
+<td><p>17.65</p></td>
+<td><p>3.90 x</p></td>
+<td><p>4.81 x</p></td>
+<td><p>290.27</p></td>
+<td><p>37154.98</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4REC-pytorch</p></td>
+<td><p>OOB Correct Eval</p></td>
+<td><p>17.67</p></td>
+<td><p>3.91 x</p></td>
+<td><p>4.81 x</p></td>
+<td><p>289.91</p></td>
+<td><p>37108.16</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4REC-pytorch</p></td>
+<td><p>Correct full</p></td>
+<td><p>16.97</p></td>
+<td><p>3.75 x</p></td>
+<td><p>4.62 x</p></td>
+<td><p>301.78</p></td>
+<td><p>38627.84</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="torch-gru4rec">
+<h2>Torch-GRU4Rec<a class="headerlink" href="#torch-gru4rec" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-18" name="sd-tab-set-8" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-18">
+Metric</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-22" name="sd-tab-set-9" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-22">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table bprmax table" id="id9">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id9" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.2304</p></td>
+<td><p>0.1237</p></td>
+<td><p>0.3533</p></td>
+<td><p>0.1399</p></td>
+<td><p>0.4995</p></td>
+<td><p>0.1500</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>0.0643</p></td>
+<td><p>0.0643</p></td>
+<td><p>0.2113</p></td>
+<td><p>0.1143</p></td>
+<td><p>0.3204</p></td>
+<td><p>0.1287</p></td>
+<td><p>0.4597</p></td>
+<td><p>0.1383</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0636</p></td>
+<td><p>0.0636</p></td>
+<td><p>0.2110</p></td>
+<td><p>0.1137</p></td>
+<td><p>0.3185</p></td>
+<td><p>0.1278</p></td>
+<td><p>0.4550</p></td>
+<td><p>0.1372</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-23" name="sd-tab-set-9" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-23">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table xe table" id="id10">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id10" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.2220</p></td>
+<td><p>0.1181</p></td>
+<td><p>0.3414</p></td>
+<td><p>0.1339</p></td>
+<td><p>0.4874</p></td>
+<td><p>0.1440</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>0.0552</p></td>
+<td><p>0.0552</p></td>
+<td><p>0.1927</p></td>
+<td><p>0.1020</p></td>
+<td><p>0.2967</p></td>
+<td><p>0.1157</p></td>
+<td><p>0.4255</p></td>
+<td><p>0.1246</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0541</p></td>
+<td><p>0.0541</p></td>
+<td><p>0.1894</p></td>
+<td><p>0.1002</p></td>
+<td><p>0.2921</p></td>
+<td><p>0.1137</p></td>
+<td><p>0.4245</p></td>
+<td><p>0.1229</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-19" name="sd-tab-set-8" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-19">
+Metric Diff</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-24" name="sd-tab-set-10" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-24">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id11">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id11" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>-6.58%</p></td>
+<td><p>-6.58%</p></td>
+<td><p>-8.30%</p></td>
+<td><p>-7.53%</p></td>
+<td><p>-9.32%</p></td>
+<td><p>-7.97%</p></td>
+<td><p>-7.97%</p></td>
+<td><p>-7.76%</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>-7.64%</p></td>
+<td><p>-7.64%</p></td>
+<td><p>-8.42%</p></td>
+<td><p>-8.08%</p></td>
+<td><p>-9.85%</p></td>
+<td><p>-8.63%</p></td>
+<td><p>-8.92%</p></td>
+<td><p>-8.54%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-25" name="sd-tab-set-10" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-25">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id12">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id12" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>-14.78%</p></td>
+<td><p>-14.78%</p></td>
+<td><p>-13.17%</p></td>
+<td><p>-13.69%</p></td>
+<td><p>-13.08%</p></td>
+<td><p>-13.55%</p></td>
+<td><p>-12.70%</p></td>
+<td><p>-13.47%</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>-16.45%</p></td>
+<td><p>-16.45%</p></td>
+<td><p>-14.67%</p></td>
+<td><p>-15.19%</p></td>
+<td><p>-14.44%</p></td>
+<td><p>-15.04%</p></td>
+<td><p>-12.90%</p></td>
+<td><p>-14.71%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-20" name="sd-tab-set-8" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-20">
+Hyperparameters</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-26" name="sd-tab-set-11" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-26">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id13">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id13" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>Torch-GRU4Rec</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>OOB</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+<td><p>elu-1</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0.15</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0.9</p></td>
+<td><p>0.9</p></td>
+<td><p>0.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-27" name="sd-tab-set-11" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-27">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id14">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id14" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>Torch-GRU4Rec</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>OOB</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-21" name="sd-tab-set-8" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key4" for="sd-tab-item-21">
+Runtimes</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-28" name="sd-tab-set-12" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-28">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id15">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id15" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>8.02</p></td>
+<td></td>
+<td></td>
+<td><p>639.87</p></td>
+<td><p>81757.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>7.71</p></td>
+<td><p>0.96 x</p></td>
+<td></td>
+<td><p>665.42</p></td>
+<td><p>85021.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>36.89</p></td>
+<td><p>4.60 x</p></td>
+<td><p>4.78 x</p></td>
+<td><p>139.19</p></td>
+<td><p>17783.97</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-29" name="sd-tab-set-12" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-29">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id16">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id16" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>4.52</p></td>
+<td></td>
+<td></td>
+<td><p>1134.52</p></td>
+<td><p>144959.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Torch-GRU4Rec params</p></td>
+<td><p>4.48</p></td>
+<td><p>0.99 x</p></td>
+<td></td>
+<td><p>1146.91</p></td>
+<td><p>146542.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Torch-GRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>17.74</p></td>
+<td><p>3.92 x</p></td>
+<td><p>3.96 x</p></td>
+<td><p>289.38</p></td>
+<td><p>36974.80</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="recpack">
+<h2>Recpack<a class="headerlink" href="#recpack" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-30" name="sd-tab-set-13" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-30">
+Metric</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-34" name="sd-tab-set-14" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-34">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table bprmax table" id="id17">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id17" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.0688</p></td>
+<td><p>0.2304</p></td>
+<td><p>0.1237</p></td>
+<td><p>0.3533</p></td>
+<td><p>0.1399</p></td>
+<td><p>0.4995</p></td>
+<td><p>0.1500</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>0.0635</p></td>
+<td><p>0.0635</p></td>
+<td><p>0.2101</p></td>
+<td><p>0.1138</p></td>
+<td><p>0.3203</p></td>
+<td><p>0.1283</p></td>
+<td><p>0.4586</p></td>
+<td><p>0.1379</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0409</p></td>
+<td><p>0.0409</p></td>
+<td><p>0.1412</p></td>
+<td><p>0.0752</p></td>
+<td><p>0.2162</p></td>
+<td><p>0.0851</p></td>
+<td><p>0.3066</p></td>
+<td><p>0.0913</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>0.0449</p></td>
+<td><p>0.0449</p></td>
+<td><p>0.1609</p></td>
+<td><p>0.0839</p></td>
+<td><p>0.2558</p></td>
+<td><p>0.0964</p></td>
+<td><p>0.3744</p></td>
+<td><p>0.1046</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>0.0430</p></td>
+<td><p>0.0430</p></td>
+<td><p>0.1643</p></td>
+<td><p>0.0836</p></td>
+<td><p>0.2580</p></td>
+<td><p>0.0959</p></td>
+<td><p>0.3756</p></td>
+<td><p>0.1040</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-35" name="sd-tab-set-14" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-35">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table xe table" id="id18">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id18" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.2220</p></td>
+<td><p>0.1181</p></td>
+<td><p>0.3414</p></td>
+<td><p>0.1339</p></td>
+<td><p>0.4874</p></td>
+<td><p>0.1440</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>0.0562</p></td>
+<td><p>0.0562</p></td>
+<td><p>0.1902</p></td>
+<td><p>0.1019</p></td>
+<td><p>0.2939</p></td>
+<td><p>0.1157</p></td>
+<td><p>0.4263</p></td>
+<td><p>0.1248</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>0.0603</p></td>
+<td><p>0.0603</p></td>
+<td><p>0.2001</p></td>
+<td><p>0.1083</p></td>
+<td><p>0.3058</p></td>
+<td><p>0.1223</p></td>
+<td><p>0.4341</p></td>
+<td><p>0.1312</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0411</p></td>
+<td><p>0.0411</p></td>
+<td><p>0.1442</p></td>
+<td><p>0.0760</p></td>
+<td><p>0.2238</p></td>
+<td><p>0.0865</p></td>
+<td><p>0.3279</p></td>
+<td><p>0.0937</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>0.0411</p></td>
+<td><p>0.0411</p></td>
+<td><p>0.1433</p></td>
+<td><p>0.0757</p></td>
+<td><p>0.2193</p></td>
+<td><p>0.0857</p></td>
+<td><p>0.3219</p></td>
+<td><p>0.0927</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>0.0408</p></td>
+<td><p>0.0408</p></td>
+<td><p>0.1463</p></td>
+<td><p>0.0766</p></td>
+<td><p>0.2274</p></td>
+<td><p>0.0873</p></td>
+<td><p>0.3296</p></td>
+<td><p>0.0944</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-31" name="sd-tab-set-13" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-31">
+Metric Diff</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-36" name="sd-tab-set-15" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-36">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id19">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id19" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>-7.71%</p></td>
+<td><p>-7.71%</p></td>
+<td><p>-8.82%</p></td>
+<td><p>-7.99%</p></td>
+<td><p>-9.35%</p></td>
+<td><p>-8.24%</p></td>
+<td><p>-8.19%</p></td>
+<td><p>-8.05%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>-40.57%</p></td>
+<td><p>-40.57%</p></td>
+<td><p>-38.70%</p></td>
+<td><p>-39.21%</p></td>
+<td><p>-38.82%</p></td>
+<td><p>-39.16%</p></td>
+<td><p>-38.63%</p></td>
+<td><p>-39.10%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>-34.84%</p></td>
+<td><p>-34.84%</p></td>
+<td><p>-30.16%</p></td>
+<td><p>-32.13%</p></td>
+<td><p>-27.59%</p></td>
+<td><p>-31.06%</p></td>
+<td><p>-25.05%</p></td>
+<td><p>-30.27%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>-37.51%</p></td>
+<td><p>-37.51%</p></td>
+<td><p>-28.70%</p></td>
+<td><p>-32.38%</p></td>
+<td><p>-26.96%</p></td>
+<td><p>-31.41%</p></td>
+<td><p>-24.81%</p></td>
+<td><p>-30.62%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-37" name="sd-tab-set-15" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-37">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id20">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id20" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>-13.23%</p></td>
+<td><p>-13.23%</p></td>
+<td><p>-14.32%</p></td>
+<td><p>-13.69%</p></td>
+<td><p>-13.90%</p></td>
+<td><p>-13.59%</p></td>
+<td><p>-12.52%</p></td>
+<td><p>-13.34%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>-6.88%</p></td>
+<td><p>-6.88%</p></td>
+<td><p>-9.87%</p></td>
+<td><p>-8.32%</p></td>
+<td><p>-10.41%</p></td>
+<td><p>-8.62%</p></td>
+<td><p>-10.92%</p></td>
+<td><p>-8.93%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>-36.53%</p></td>
+<td><p>-36.53%</p></td>
+<td><p>-35.05%</p></td>
+<td><p>-35.64%</p></td>
+<td><p>-34.45%</p></td>
+<td><p>-35.37%</p></td>
+<td><p>-32.72%</p></td>
+<td><p>-34.94%</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>-36.50%</p></td>
+<td><p>-36.50%</p></td>
+<td><p>-35.44%</p></td>
+<td><p>-35.94%</p></td>
+<td><p>-35.75%</p></td>
+<td><p>-36.00%</p></td>
+<td><p>-33.96%</p></td>
+<td><p>-35.62%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>-37.00%</p></td>
+<td><p>-37.00%</p></td>
+<td><p>-34.07%</p></td>
+<td><p>-35.11%</p></td>
+<td><p>-33.38%</p></td>
+<td><p>-34.75%</p></td>
+<td><p>-32.37%</p></td>
+<td><p>-34.46%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-32" name="sd-tab-set-13" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-32">
+Hyperparameters</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-38" name="sd-tab-set-16" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-38">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id21">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id21" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>Recpack</p></th>
+<th class="head"><p>Recpack</p></th>
+<th class="head"><p>Recpack</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>Recpack params</p></td>
+<td><p>OOB</p></td>
+<td><p>Correct exp</p></td>
+<td><p>Correct full</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+<td><p>bpr-max</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>elu-1</p></td>
+<td><p>linear</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+<td><p>512</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.3</p></td>
+<td><p>0.3</p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0.15</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0.3</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0.9</p></td>
+<td><p>0.9</p></td>
+<td><p>1</p></td>
+<td><p>0.9</p></td>
+<td><p>0.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-39" name="sd-tab-set-16" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-39">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id22">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id22" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>Recpack</p></th>
+<th class="head"><p>Recpack</p></th>
+<th class="head"><p>Recpack</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>Recpack params</p></td>
+<td><p>Recpack params</p></td>
+<td><p>OOB</p></td>
+<td><p>Correct exp</p></td>
+<td><p>Correct full</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.45</p></td>
+<td><p>0.45</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>ALL</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-33" name="sd-tab-set-13" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key4" for="sd-tab-item-33">
+Runtimes</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-40" name="sd-tab-set-17" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-40">
+BPR-Max</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id23">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id23" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>8.02</p></td>
+<td></td>
+<td></td>
+<td><p>639.87</p></td>
+<td><p>81757.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>7.73</p></td>
+<td><p>0.96 x</p></td>
+<td></td>
+<td><p>663.79</p></td>
+<td><p>84812.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>352.17</p></td>
+<td><p>43.91 x</p></td>
+<td><p>45.56 x</p></td>
+<td><p>79.68</p></td>
+<td><p>1862.33</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>346.70</p></td>
+<td><p>43.23 x</p></td>
+<td><p>44.85 x</p></td>
+<td><p>80.94</p></td>
+<td><p>1891.72</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>342.34</p></td>
+<td><p>42.69 x</p></td>
+<td><p>44.29 x</p></td>
+<td><p>81.97</p></td>
+<td><p>1915.79</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-41" name="sd-tab-set-17" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-41">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id24">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id24" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>4.52</p></td>
+<td></td>
+<td></td>
+<td><p>1134.52</p></td>
+<td><p>144959.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>4.45</p></td>
+<td><p>0.98 x</p></td>
+<td></td>
+<td><p>1154.05</p></td>
+<td><p>147454.00</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Recpack params</p></td>
+<td><p>76.19</p></td>
+<td><p>16.86 x</p></td>
+<td><p>17.12 x</p></td>
+<td><p>67.37</p></td>
+<td><p>8608.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>OOB</p></td>
+<td><p>115.21</p></td>
+<td><p>25.49 x</p></td>
+<td><p>25.89 x</p></td>
+<td><p>243.62</p></td>
+<td><p>5693.79</p></td>
+</tr>
+<tr class="row-even"><td><p>Recpack</p></td>
+<td><p>Correct exp</p></td>
+<td><p>115.44</p></td>
+<td><p>25.54 x</p></td>
+<td><p>25.94 x</p></td>
+<td><p>243.09</p></td>
+<td><p>5681.55</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recpack</p></td>
+<td><p>Correct full</p></td>
+<td><p>115.35</p></td>
+<td><p>25.52 x</p></td>
+<td><p>25.92 x</p></td>
+<td><p>243.27</p></td>
+<td><p>5685.80</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gru4rec-tensorflow">
+<h2>GRU4Rec_Tensorflow<a class="headerlink" href="#gru4rec-tensorflow" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-42" name="sd-tab-set-18" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-42">
+Metric</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-46" name="sd-tab-set-19" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-46">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by GRU4Rec_Tensorflow</p>
+</div>
+</div>
+<input id="sd-tab-item-47" name="sd-tab-set-19" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-47">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table xe table" id="id25">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id25" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.2220</p></td>
+<td><p>0.1181</p></td>
+<td><p>0.3414</p></td>
+<td><p>0.1339</p></td>
+<td><p>0.4874</p></td>
+<td><p>0.1440</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4Rec_Tensorflow params</p></td>
+<td><p>0.0313</p></td>
+<td><p>0.0313</p></td>
+<td><p>0.1136</p></td>
+<td><p>0.0588</p></td>
+<td><p>0.1893</p></td>
+<td><p>0.0687</p></td>
+<td><p>0.2976</p></td>
+<td><p>0.0761</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0043</p></td>
+<td><p>0.0043</p></td>
+<td><p>0.0129</p></td>
+<td><p>0.0073</p></td>
+<td><p>0.0202</p></td>
+<td><p>0.0082</p></td>
+<td><p>0.0284</p></td>
+<td><p>0.0088</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>Correct Exp</p></td>
+<td><p>0.0335</p></td>
+<td><p>0.0335</p></td>
+<td><p>0.1224</p></td>
+<td><p>0.0635</p></td>
+<td><p>0.1978</p></td>
+<td><p>0.0734</p></td>
+<td><p>0.3014</p></td>
+<td><p>0.0805</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-43" name="sd-tab-set-18" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-43">
+Metric Diff</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-48" name="sd-tab-set-20" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-48">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by GRU4Rec_Tensorflow</p>
+</div>
+</div>
+<input id="sd-tab-item-49" name="sd-tab-set-20" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-49">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id26">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id26" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4Rec_Tensorflow params</p></td>
+<td><p>-51.59%</p></td>
+<td><p>-51.59%</p></td>
+<td><p>-48.83%</p></td>
+<td><p>-50.26%</p></td>
+<td><p>-44.54%</p></td>
+<td><p>-48.70%</p></td>
+<td><p>-38.94%</p></td>
+<td><p>-47.19%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>OOB</p></td>
+<td><p>-93.40%</p></td>
+<td><p>-93.40%</p></td>
+<td><p>-94.19%</p></td>
+<td><p>-93.83%</p></td>
+<td><p>-94.08%</p></td>
+<td><p>-93.85%</p></td>
+<td><p>-94.17%</p></td>
+<td><p>-93.89%</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>Correct Exp</p></td>
+<td><p>-48.27%</p></td>
+<td><p>-48.27%</p></td>
+<td><p>-44.85%</p></td>
+<td><p>-46.24%</p></td>
+<td><p>-42.07%</p></td>
+<td><p>-45.18%</p></td>
+<td><p>-38.16%</p></td>
+<td><p>-44.14%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-44" name="sd-tab-set-18" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-44">
+Hyperparameters</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-50" name="sd-tab-set-21" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-50">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by GRU4Rec_Tensorflow</p>
+</div>
+</div>
+<input id="sd-tab-item-51" name="sd-tab-set-21" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-51">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id27">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id27" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec_Tensorflow</p></th>
+<th class="head"><p>GRU4Rec_Tensorflow</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>GRU4Rec_Tensorflow params</p></td>
+<td><p>OOB</p></td>
+<td><p>Correct Exp</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>50</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.45</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-45" name="sd-tab-set-18" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key4" for="sd-tab-item-45">
+Runtimes</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-52" name="sd-tab-set-22" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-52">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by GRU4Rec_Tensorflow</p>
+</div>
+</div>
+<input id="sd-tab-item-53" name="sd-tab-set-22" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-53">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id28">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id28" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>4.52</p></td>
+<td></td>
+<td></td>
+<td><p>1134.52</p></td>
+<td><p>144959.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>GRU4Rec_Tensorflow params</p></td>
+<td><p>3.62</p></td>
+<td><p>0.80 x</p></td>
+<td></td>
+<td><p>1417.96</p></td>
+<td><p>181209.00</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>OOB</p></td>
+<td><p>26.33</p></td>
+<td><p>5.83 x</p></td>
+<td><p>7.27 x</p></td>
+<td><p>498.25</p></td>
+<td><p>24912.83</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec_Tensorflow</p></td>
+<td><p>Correct Exp</p></td>
+<td><p>10.75</p></td>
+<td><p>2.38 x</p></td>
+<td><p>2.97 x</p></td>
+<td><p>476.49</p></td>
+<td><p>60990.52</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="kerasgru4rec">
+<h2>KerasGRU4Rec<a class="headerlink" href="#kerasgru4rec" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-54" name="sd-tab-set-23" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-54">
+Metric</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-58" name="sd-tab-set-24" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-58">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by KerasGRU4Rec</p>
+</div>
+</div>
+<input id="sd-tab-item-59" name="sd-tab-set-24" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-59">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table xe table" id="id29">
+<caption><span class="caption-text">Metrics</span><a class="headerlink" href="#id29" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1</p></th>
+<th class="head"><p>MRR&#64;1</p></th>
+<th class="head"><p>Recall&#64;5</p></th>
+<th class="head"><p>MRR&#64;5</p></th>
+<th class="head"><p>Recall&#64;10</p></th>
+<th class="head"><p>MRR&#64;10</p></th>
+<th class="head"><p>Recall&#64;20</p></th>
+<th class="head"><p>MRR&#64;20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.0647</p></td>
+<td><p>0.2220</p></td>
+<td><p>0.1181</p></td>
+<td><p>0.3414</p></td>
+<td><p>0.1339</p></td>
+<td><p>0.4874</p></td>
+<td><p>0.1440</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>0.0572</p></td>
+<td><p>0.0572</p></td>
+<td><p>0.1962</p></td>
+<td><p>0.1042</p></td>
+<td><p>0.3003</p></td>
+<td><p>0.1178</p></td>
+<td><p>0.4304</p></td>
+<td><p>0.1268</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>0.0604</p></td>
+<td><p>0.0604</p></td>
+<td><p>0.2010</p></td>
+<td><p>0.1086</p></td>
+<td><p>0.3042</p></td>
+<td><p>0.1223</p></td>
+<td><p>0.4320</p></td>
+<td><p>0.1311</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>0.0511</p></td>
+<td><p>0.0511</p></td>
+<td><p>0.1723</p></td>
+<td><p>0.0920</p></td>
+<td><p>0.2704</p></td>
+<td><p>0.1049</p></td>
+<td><p>0.3922</p></td>
+<td><p>0.1133</p></td>
+</tr>
+<tr class="row-even"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct exp</p></td>
+<td><p>0.0518</p></td>
+<td><p>0.0518</p></td>
+<td><p>0.1774</p></td>
+<td><p>0.0945</p></td>
+<td><p>0.2694</p></td>
+<td><p>0.1066</p></td>
+<td><p>0.3853</p></td>
+<td><p>0.1146</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct full</p></td>
+<td><p>0.0510</p></td>
+<td><p>0.0510</p></td>
+<td><p>0.1755</p></td>
+<td><p>0.0935</p></td>
+<td><p>0.2699</p></td>
+<td><p>0.1060</p></td>
+<td><p>0.3869</p></td>
+<td><p>0.1141</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-55" name="sd-tab-set-23" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-55">
+Metric Diff</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-60" name="sd-tab-set-25" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-60">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by KerasGRU4Rec</p>
+</div>
+</div>
+<input id="sd-tab-item-61" name="sd-tab-set-25" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-61">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id30">
+<caption><span class="caption-text">Metric difference compared to the “Best params” version with the corresponding loss</span><a class="headerlink" href="#id30" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Recall&#64;1 Diff</p></th>
+<th class="head"><p>MRR&#64;1 Diff</p></th>
+<th class="head"><p>Recall&#64;5 Diff</p></th>
+<th class="head"><p>MRR&#64;5 Diff</p></th>
+<th class="head"><p>Recall&#64;10 Diff</p></th>
+<th class="head"><p>MRR&#64;10 Diff</p></th>
+<th class="head"><p>Recall&#64;20 Diff</p></th>
+<th class="head"><p>MRR&#64;20 Diff</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>-11.66%</p></td>
+<td><p>-11.66%</p></td>
+<td><p>-11.62%</p></td>
+<td><p>-11.83%</p></td>
+<td><p>-12.02%</p></td>
+<td><p>-11.98%</p></td>
+<td><p>-11.70%</p></td>
+<td><p>-12.00%</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>-6.72%</p></td>
+<td><p>-6.72%</p></td>
+<td><p>-9.43%</p></td>
+<td><p>-8.02%</p></td>
+<td><p>-10.89%</p></td>
+<td><p>-8.65%</p></td>
+<td><p>-11.37%</p></td>
+<td><p>-8.99%</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>-21.10%</p></td>
+<td><p>-21.10%</p></td>
+<td><p>-22.38%</p></td>
+<td><p>-22.09%</p></td>
+<td><p>-20.80%</p></td>
+<td><p>-21.61%</p></td>
+<td><p>-19.53%</p></td>
+<td><p>-21.32%</p></td>
+</tr>
+<tr class="row-even"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct exp</p></td>
+<td><p>-19.91%</p></td>
+<td><p>-19.91%</p></td>
+<td><p>-20.08%</p></td>
+<td><p>-20.02%</p></td>
+<td><p>-21.08%</p></td>
+<td><p>-20.36%</p></td>
+<td><p>-20.94%</p></td>
+<td><p>-20.44%</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct full</p></td>
+<td><p>-21.27%</p></td>
+<td><p>-21.27%</p></td>
+<td><p>-20.94%</p></td>
+<td><p>-20.82%</p></td>
+<td><p>-20.92%</p></td>
+<td><p>-20.81%</p></td>
+<td><p>-20.61%</p></td>
+<td><p>-20.81%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-56" name="sd-tab-set-23" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-56">
+Hyperparameters</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-62" name="sd-tab-set-26" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-62">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by KerasGRU4Rec</p>
+</div>
+</div>
+<input id="sd-tab-item-63" name="sd-tab-set-26" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-63">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id31">
+<caption><span class="caption-text">Hyperparameters used in the experiment</span><a class="headerlink" href="#id31" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>GRU4Rec Official</p></th>
+<th class="head"><p>KerasGRU4Rec</p></th>
+<th class="head"><p>KerasGRU4Rec</p></th>
+<th class="head"><p>KerasGRU4Rec</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variant</p></td>
+<td><p>Best params</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>OOB</p></td>
+<td><p>Correct exp</p></td>
+<td><p>Correct full</p></td>
+</tr>
+<tr class="row-odd"><td><p>loss</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+<td><p>cross-entropy</p></td>
+</tr>
+<tr class="row-even"><td><p>optim</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+<td><p>adam</p></td>
+<td><p>adagrad</p></td>
+<td><p>adagrad</p></td>
+</tr>
+<tr class="row-odd"><td><p>constrained_embedding</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>embedding</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>final_act</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+<td><p>softmax</p></td>
+</tr>
+<tr class="row-even"><td><p>layers</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-odd"><td><p>batch_size</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+<td><p>100</p></td>
+<td><p>128</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-even"><td><p>dropout_p_embed</p></td>
+<td><p>0.45</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropout_p_hidden</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+<td><p>0.25</p></td>
+<td><p>0.15</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>learning_rate</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.001</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>momentum</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>n_sample</p></td>
+<td><p>2048</p></td>
+<td><p>2048</p></td>
+<td><p>ALL</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample_alpha</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>bpreg</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>logq</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-57" name="sd-tab-set-23" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key4" for="sd-tab-item-57">
+Runtimes</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-64" name="sd-tab-set-27" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_1" for="sd-tab-item-64">
+BPR-Max</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BPR-Max is not supported by KerasGRU4Rec</p>
+</div>
+</div>
+<input id="sd-tab-item-65" name="sd-tab-set-27" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key_sub_2" for="sd-tab-item-65">
+Cross-Entropy</label><div class="sd-tab-content docutils">
+<table class="striped-table table" id="id32">
+<caption><span class="caption-text">Runtime metrics</span><a class="headerlink" href="#id32" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Implementation</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Avg. epoch time (s)</p></th>
+<th class="head"><p>Avg. epoch time to Best</p></th>
+<th class="head"><p>Avg. epoch time to Matching</p></th>
+<th class="head"><p>Avg. mb/s</p></th>
+<th class="head"><p>Avg. e/s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>Best params</p></td>
+<td><p>4.52</p></td>
+<td></td>
+<td></td>
+<td><p>1134.52</p></td>
+<td><p>144959.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>4.06</p></td>
+<td><p>0.90 x</p></td>
+<td></td>
+<td><p>1264.57</p></td>
+<td><p>161575.00</p></td>
+</tr>
+<tr class="row-even"><td><p>GRU4Rec Official</p></td>
+<td><p>KerasGRU4Rec params</p></td>
+<td><p>74.84</p></td>
+<td><p>16.56 x</p></td>
+<td><p>18.43 x</p></td>
+<td><p>68.58</p></td>
+<td><p>8763.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>OOB</p></td>
+<td><p>359.31</p></td>
+<td><p>79.49 x</p></td>
+<td><p>88.50 x</p></td>
+<td><p>14.26</p></td>
+<td><p>1824.70</p></td>
+</tr>
+<tr class="row-even"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct exp</p></td>
+<td><p>355.51</p></td>
+<td><p>78.65 x</p></td>
+<td><p>87.56 x</p></td>
+<td><p>14.45</p></td>
+<td><p>1850.14</p></td>
+</tr>
+<tr class="row-odd"><td><p>KerasGRU4Rec</p></td>
+<td><p>Correct full</p></td>
+<td><p>367.03</p></td>
+<td><p>81.20 x</p></td>
+<td><p>90.40 x</p></td>
+<td><p>13.96</p></td>
+<td><p>1786.86</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../retailrocket/retailrocket_main.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Retailrocket</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../exp_impl/exp_implementations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Implementations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gru4rec-pytorch">GRU4REC-pytorch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch-gru4rec">Torch-GRU4Rec</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recpack">Recpack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gru4rec-tensorflow">GRU4Rec_Tensorflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kerasgru4rec">KerasGRU4Rec</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Balázs Hidasi & Ádám Czapp
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <div class="footer-flex">
+    <a class="footer-banner" href="https://x.com/balazshidasi", target="_blank">
+        <img src="https://img.shields.io/static/v1?style=plastic&logo=x&label=Follow&message=@balazshidasi&labelColor=gray&color=lightgray" alt="Follow Balázs Hidasi at X.com" >
+    </a>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

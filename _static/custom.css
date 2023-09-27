@@ -1,0 +1,47 @@
+
+/*PAGE*/
+.bd-page-width {
+  max-width: 100%;
+}
+
+.bd-main .bd-content .bd-article-container {
+  max-width: 100%;
+}
+
+/*NAVBAR */
+.navbar-brand {
+  flex-direction: column; /*row column-reverse or column*/
+}
+
+.logo__image {
+  width: 50% !important; /*or 100px for horizontal layout */
+  height: auto !important;
+}
+
+/*FOOTER*/
+div.footer-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  div.footer-flex {
+    flex-direction: column;
+  }
+}
+
+a.footer-banner {
+  margin-right: 10px;
+}
+
+/*TABLES*/
+table.striped-table tr:nth-child(even) {
+  background-color: rgb(226, 226, 226);
+}
+
+/*BARPLOT*/
+iframe.barplot-container {
+  border: none;
+  width: 80%;
+  height: auto;
+}
