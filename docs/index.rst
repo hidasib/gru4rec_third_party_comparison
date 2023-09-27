@@ -29,3 +29,11 @@ To support research in the field of sequential recommenders, **we released an of
 
    By Dataset <exp_data/exp_dataset>
    By Implementation <exp_impl/exp_implementations>
+
+.. toctree::
+   :caption: Additional resources
+   :maxdepth: 2
+
+   Research paper <additional_resources/paper>
+   additional_resources/qa
+   Official GRU4rec implementations <additional_resources/official_impl>
