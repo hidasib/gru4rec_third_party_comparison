@@ -15,7 +15,8 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 # -- Project information -----------------------------------------------------
 
-project = 'GRU4Rec Third Party Experiments'
+project = 'GRU4Rec Third Party Implementations'
+html_title = 'GRU4Rec Third Party Implementations'
 copyright = ''
 author = 'Balázs Hidasi & Ádám Czapp'
 
