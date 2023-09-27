@@ -1,7 +1,6 @@
 Diginetica
 ==================================================================
-Description and some text for the Diginetica dataset.
-
+The dataset consists of user sessions collected over six months. The sessions were extracted from the search engine logs of an e-commerce site, and contain item page views that were preceded by search queries. The dataset doesn’t have exact timestamps, but each event has a property denoting the elapsed time since its session’s first query. The day of the first queries is also known. The dataset was released for the CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge.
 
 .. raw:: html
 

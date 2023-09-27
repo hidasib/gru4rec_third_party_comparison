@@ -1,7 +1,14 @@
-GRU4Rec_Tensorflow
+KerasGRU4Rec
 ==================================================================
 
-some text
+* **Out-of-the box:**
+   The implementation as is.
+* **Minor fix:**
+   #. Hard-coded parameters: *hidden_size*, *dropout_p_hidden*, *learning_rate* now can be set.
+   #. The default optimizer is changed to Adagrad.
+* **Major fix:**
+   #. Fixed incorrect resetting of hidden states (the same error that *GRU4REC-pytorch* has)
+   #. Epochs don’t end now when the number of remaining sessions is not enough to fully fill the mini-batch.
 
 ------------------------------------------------------------------
 Rees46
@@ -18,14 +25,14 @@ Rees46
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/rees46_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -37,14 +44,14 @@ Rees46
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/rees46_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -56,14 +63,14 @@ Rees46
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/rees46_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -75,14 +82,14 @@ Rees46
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/rees46_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
     
 ------------------------------------------------------------------
@@ -100,14 +107,14 @@ Yoochoose
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -119,14 +126,14 @@ Yoochoose
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -138,14 +145,14 @@ Yoochoose
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -157,14 +164,14 @@ Yoochoose
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -182,14 +189,14 @@ Coveo
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/coveo_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -201,14 +208,14 @@ Coveo
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/coveo_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -220,14 +227,14 @@ Coveo
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/coveo_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/coveo_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -239,14 +246,14 @@ Coveo
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/coveo_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/coveo_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -264,14 +271,14 @@ Retailrocket
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -283,14 +290,14 @@ Retailrocket
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -302,14 +309,14 @@ Retailrocket
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -321,14 +328,14 @@ Retailrocket
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -346,14 +353,14 @@ Diginetica
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/diginetica_gru4rec_tensorflow_metrics_cross-entropy.csv
+               :file: /data_sources/results/diginetica_keras_gru4rec_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -365,14 +372,14 @@ Diginetica
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/diginetica_gru4rec_tensorflow_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/diginetica_keras_gru4rec_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -384,14 +391,14 @@ Diginetica
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/diginetica_gru4rec_tensorflow_hyperp_cross-entropy.csv
+               :file: /data_sources/results/diginetica_keras_gru4rec_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -403,12 +410,12 @@ Diginetica
             :sync: key_sub_1
 
             .. note::
-               BPR-Max is not supported by GRU4Rec_Tensorflow
+               BPR-Max is not supported by KerasGRU4Rec
 
          .. tab-item:: Cross-Entropy
             :sync: key_sub_2
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/diginetica_gru4rec_tensorflow_times_cross-entropy.csv
+               :file: /data_sources/results/diginetica_keras_gru4rec_times_cross-entropy.csv
                :header-rows: 1

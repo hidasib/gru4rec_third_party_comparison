@@ -1,7 +1,17 @@
 GRU4REC-pytorch
 ==================================================================
 
-some text
+* **Out-of-the-box:** 
+   Running the code on GPU required moving mean computation of a variable to the correct device.
+* **Inference fix:**
+   The evaluation code now resets the hidden state when the corresponding session ends.
+* **Major fix:**
+   #. Fixed the order of sampling and applying softmax transformation, as it was in the reverse order resulting in small gradients and slow convergence.
+   #. Softmax transformation is now only applied once (was twice).
+   #. Hidden states are now reset correctly during training. The mask governing the resets was only recalculated when a session ended, resulting in false resets.
+   #. BPR-max loss is fixed to use the correct equation, but the missing score regularization was not added to algorithm.
+   #. Both dropout parameters now work as expected. Dropout on the final GRU layer and embedding dropout in separate embedding mode was originally not applied.
+* Sampling is performed after all item scores are computed, which slows down training. This bug is rooted so deep in the code that we did not fix it.
 
 ------------------------------------------------------------------
 Rees46

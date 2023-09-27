@@ -1,7 +1,12 @@
-KerasGRU4Rec
+GRU4Rec_Tensorflow
 ==================================================================
 
-some text
+* **Out-of-the-box:**
+   The code is able to run, however it is not prepared for unknown test items. The dropout parameter was fixed to regain its original meaning as it was used as keep probability instead of drop probability.
+* **Minor fix:**
+   #. Lowered the large initial accumulator value close to zero as it prevented sufficient convergence.
+   #. The exponential learning rate decay is discarded as it is not part of the original.
+   #. Now the hard-coded batch_size parameter can be changed.
 
 ------------------------------------------------------------------
 Rees46
@@ -25,7 +30,7 @@ Rees46
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -44,7 +49,7 @@ Rees46
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/rees46_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -63,7 +68,7 @@ Rees46
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/rees46_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -82,7 +87,7 @@ Rees46
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/rees46_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/rees46_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1
     
 ------------------------------------------------------------------
@@ -107,7 +112,7 @@ Yoochoose
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -126,7 +131,7 @@ Yoochoose
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/yoochoose_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -145,7 +150,7 @@ Yoochoose
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/yoochoose_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -164,7 +169,7 @@ Yoochoose
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/yoochoose_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/yoochoose_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -189,7 +194,7 @@ Coveo
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/coveo_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -208,7 +213,7 @@ Coveo
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/coveo_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -227,7 +232,7 @@ Coveo
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/coveo_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -246,7 +251,7 @@ Coveo
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/coveo_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/coveo_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -271,7 +276,7 @@ Retailrocket
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/retailrocket_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -290,7 +295,7 @@ Retailrocket
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/retailrocket_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -309,7 +314,7 @@ Retailrocket
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/retailrocket_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -328,7 +333,7 @@ Retailrocket
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/retailrocket_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/retailrocket_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1
 
 ------------------------------------------------------------------
@@ -353,7 +358,7 @@ Diginetica
 
             .. csv-table:: Metrics
                :class: striped_table
-               :file: /data_sources/results/diginetica_keras_gru4rec_metrics_cross-entropy.csv
+               :file: /data_sources/results/diginetica_gru4rec_tensorflow_metrics_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Metric Diff
@@ -372,7 +377,7 @@ Diginetica
 
             .. csv-table:: Metric difference compared to the "Best params" version with the corresponding loss
                :class: striped_table
-               :file: /data_sources/results/diginetica_keras_gru4rec_metrics_change_cross-entropy.csv
+               :file: /data_sources/results/diginetica_gru4rec_tensorflow_metrics_change_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Hyperparameters
@@ -391,7 +396,7 @@ Diginetica
 
             .. csv-table:: Hyperparameters used in the experiment
                :class: striped_table
-               :file: /data_sources/results/diginetica_keras_gru4rec_hyperp_cross-entropy.csv
+               :file: /data_sources/results/diginetica_gru4rec_tensorflow_hyperp_cross-entropy.csv
                :header-rows: 1
 
    .. tab-item:: Runtimes
@@ -410,5 +415,5 @@ Diginetica
 
             .. csv-table:: Runtime metrics
                :class: striped_table
-               :file: /data_sources/results/diginetica_keras_gru4rec_times_cross-entropy.csv
+               :file: /data_sources/results/diginetica_gru4rec_tensorflow_times_cross-entropy.csv
                :header-rows: 1

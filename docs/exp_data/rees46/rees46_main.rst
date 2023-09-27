@@ -1,7 +1,6 @@
 Rees46
 ==================================================================
-Description and some text for the Rees46 dataset.
-
+The dataset contains 8 months of user behavior data *view*, *cart* and *purchase* events from a multicategory e-commerce website between October 2019 and April 2020. We only use the first two months of the available data. This is similar to how real-life recommenders are usually trained only on the most recent 0.5–2 months to avoid concept drift, if the traffic is large enough. We only use view events for next item prediction. The dataset does come with precomputed sessions, but it is unclear how user histories are split into sessions. E.g. a few sessions have events from multiple users, and the time gap between subsequent events within a session can be arbitrarily long. Therefore, sessions were recomputed from the user histories using the standard 1 hour session gap threshold.
 
 .. raw:: html
 

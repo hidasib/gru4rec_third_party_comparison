@@ -1,7 +1,6 @@
 Yoochoose
 ==================================================================
-Description and some text for the Yoochoose dataset.
-
+This dataset contains user sessions from an unnamed e-commerce site. The data is already split into proper sessions and each session consists of one or more click events and might have purchase event(s) associated with it. As we are focusing on the next item prediction task within sessions, we only use the click events. The dataset was originally released for RecSys Challenge 2015 and has been used for evaluating sessionbased recommenders since then.
 
 .. raw:: html
 

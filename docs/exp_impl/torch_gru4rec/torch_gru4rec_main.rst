@@ -1,7 +1,10 @@
 Torch-GRU4Rec
 ==================================================================
 
-some text
+* **Out-of-the-box:** 
+   A single typo needed to be fixed, so the code is able to run.
+* The small differences (e.g. missing momentum parameter) add up to a noticeable difference when Torch-GRU4Rec is compared to the matching features version.
+* Sampling is performed after all item scores are computed, which slows down training. This bug is rooted so deep in the code that we did not fix it.
 
 ------------------------------------------------------------------
 Rees46

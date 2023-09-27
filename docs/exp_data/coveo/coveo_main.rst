@@ -1,7 +1,6 @@
 Coveo
 ==================================================================
-Description and some text for the Coveo dataset.
-
+This dataset was released for the purpose of shopper intent prediction from clickstream data as part of the SIGIR Ecom 2021 Challenge. The dataset consists of user sessions using 30 minutes as the session gap threshold. The data was collected by Coveo from one of it’s partner’s e-commerce site. There are five types of events: *add*, *click*, *detail*, *purchase* and *remove*. *Detail* events correspond to the user visiting the detail page of an item (similarly to view events in e.g. Yoochoose). We use only these *detail* events to build the sessions.
 
 .. raw:: html
 

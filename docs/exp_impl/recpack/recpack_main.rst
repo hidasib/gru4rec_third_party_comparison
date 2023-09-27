@@ -1,7 +1,15 @@
 Recpack
 ==================================================================
 
-some text
+* **Out-of-the-box:** 
+   Running the code on GPU required fixes in the evaluation pipeline and the application of dropout.
+* **Minor fix:**
+   #. *bpreg* is no longer hard-coded.
+   #. Fixed BPR-max so *log()* can no longer have 0 as its argument.
+   #. Switched weight matrix initialization to *Glorot uniform* to match the original.
+* **Major fix:**
+   Fixed dropout to use separate parameters for embeddings and hidden states.
+* Sampling is performed after all item scores are computed, which slows down training. This bug is rooted so deep in the code that we did not fix it.
 
 ------------------------------------------------------------------
 Rees46

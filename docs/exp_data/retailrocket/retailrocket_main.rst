@@ -1,7 +1,6 @@
 Retailrocket
 ==================================================================
-Description and some text for the Retailrocket dataset.
-
+The dataset consists of *view*, *add to cart*, and *transaction* events collected over 4.5 months. We only keep the view events. The dataset was published to motivate research in the field of recommender systems.
 
 .. raw:: html
 
